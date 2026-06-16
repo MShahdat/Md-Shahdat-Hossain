@@ -1,64 +1,57 @@
-import React from 'react';
-import { FaArrowRight } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+
 import me from '/shahdat1.png';
-import cv from '/Md. Shahdat Hossain_CV.pdf';
+import cv from '/Md-Shahdat-Hossain-cv.pdf'
+import { FaDownload, FaRocket } from "react-icons/fa6";
+import { jsSvg, nextSvg, nodeSvg, postgresqlSvg, reactSvg, tsSvg } from '../utility/svg';
 
 const About = () => {
 
-  const link = [
-    {
-      icon: <FaFacebook />,
-      to: 'https://www.facebook.com/md.shahdat.hossain.547522/',
-    },
-    {
-      icon: <FaTwitter />,
-      to: 'https://x.com/MdShahdat25',
-    },
-    {
-      icon: <FaInstagram />,
-      to: 'https://www.instagram.com/sahadathossain85/',
-    },
-    {
-      icon: <FaGithub />,
-      to: 'https://github.com/MShahdat',
-    },
-    {
-      icon: <FaLinkedin />,
-      to: 'https://www.linkedin.com/in/md-shahdat-hossain/',
-    }
-  ]
+  const tech = [
+    { icon: reactSvg, name: 'React.js' },
+    { icon: jsSvg, name: 'JavaScript' },
+    { icon: nodeSvg, name: 'Node.js' },
+    { icon: tsSvg, name: 'TypeScript' },
+    { icon: postgresqlSvg, name: 'PostgreSQL' },
+    { icon: nextSvg, name: 'Next.js' },
+  ];
 
   return (
-    <div id='about' className='bg-black  text-white'>
-      <div className='max-w-7xl px-4 py-16 mx-auto'>
-        <div >
-          <h1 className='text-3xl lg:text-4xl font-bold text-center text-primary tracking-wider bg-white/5 shadow-2xl shadow-primary w-fit mx-auto'>About Shahdat</h1>
-          <div className='mt-3 w-[150px] lg:w-[200px] mx-auto h-[3px] rounded-2xl bg-primary'></div>
+    <div id='about' className='bg-[#010108]  text-white'>
+      <div className='max-w-6xl px-4 py-12 mx-auto'>
+        <div className='flex flex-col items-center'>
+          <div className='w-fit flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1 tracking-normal border border-secondaryColor/50 bg-ternaryColor/20 rounded-full shadow-2xl shadow-primaryColor'>
+            <p>👤</p>
+            <p className='text-primaryColor font-bold text-[13px] md:text-[14px] uppercase whitespace-pre tracking-wide'>About Me</p>
+          </div>
         </div>
 
-        <div className='mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-4 '>
-          <div className='order-2 md:order-1 bg-green-00 h-100 w-full'>
-            <div className='xl:px-8 bg-red-00 h-full w-full sm:w-2/3 md:w-full lg:w-4/5 mx-auto'>
-              <img src={me} className='h-full w-screen object-cover' />
+        <div className='mt-6 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 '>
+          <div className='order-2 md:order-1 bg-green-00 h-full w-full flex items-center justify-center relative'>
+            <div className=' w-4/5 sm:w-3/5 md:w-full lg:w-4/5 mx-auto'>
+              <div className='absolute inset-0 bg-linear-to-r from-ternaryColor via-primaryColor to-secondaryColor rounded-2xl blur-2xl opacity-20'></div>
+
+              <div className='relative border border-primaryColor/30 rounded-2xl overflow-hidden shadow-2xl shadow-primaryColor hover:shadow-primaryColor/80 transform transition-all duration-300 hover:scale-[1.02]'>
+                <img src={me} className='w-full h-[340px] sm:h-[480px] md:h-[520px] object-cover' />
+              </div>
+
+              {/* <div className='absolute bottom-6 left-4 md:-bottom-8 md:-left-6 flex flex-col items-center justify-center border border-primaryColor/50 bg-gradient-to-br from-primaryColor to-secondaryColor px-4 py-3 rounded-xl shadow-xl shadow-primaryColor'>
+                  <span className='text-2xl font-bold text-white'>2+</span>
+                  <span className='text-xs font-medium text-white whitespace-nowrap'>Years Exp</span>
+                </div> */}
             </div>
           </div>
+          <div className=' order-2 md:order-2 border-primaryColor/20 md:px-2 py-0 pb-4 bg-white/0 rounded-lg shadow-xl transform ease-in-out duration-300 hover:border-primaryColor/60'>
+            <h1 className='text-3xl md:text-4xl xl:text-5xl bg-linear-to-r from-ternaryColor via-primaryColor to-secondaryColor bg-clip-text text-transparent leading-tight font-bold'>Passionate Developer & Tech Enthusiast</h1>
+            <p className='mt-6 text-md md:text-[17px] text-white/50 leading-relaxed tracking-wide'>I'm a full-stack web developer with experience building 5+ industry standard web applications. I specialized in React, JavaScript, TypeScript, Node.js, PostgreSQL, Tailwind CSS and so on. Skilled in responsive UI development, REST API development & integration, Redux Toolkit, state management, JWT authentication, and performance optimization</p>
 
-          <div className='order-1 md:order-2 border border-primary/20 px-4 py-6 bg-white/10 rounded-lg'>
-            <p className='tracking-wider leading-relaxed text-justify text-white/80'>I'm a dedicated Frontend Developer specializing in building modern, scalable, and user-centric web applications with a strong focus on accessibility, performance, and clean architecture. I enjoy translating complex requirements into intuitive and visually refined user experiences.</p>
-
-            <div
-            >
-              <h3 className='mt-8 font-medium text-[17px]'>What I Do</h3>
-              <div className='tracking-wider leading-relaxed text-justify text-white/80'>
-                <p>✅ Build scalable and well-structured frontend architectures</p>
-                <p>✅ Focus on clean UI, accessibility, and smooth user interactions</p>
-                <p>✅ Continuously learn and apply modern tools, frameworks, and best practices</p>
-              </div>
+            {/* tech */}
+            <div className='mt-8 flex flex-wrap items-center gap-2'>
+              {tech.map((t, idx) => (
+                <div key={idx} className='flex items-center gap-2 border border-primaryColor/30 font-semibold text-ternaryColor bg-ternaryColor/12 px-4 py-1.5 rounded-full'>
+                  <span className='size-4 flex items-center justify-center'>{t.icon}</span>
+                  <span>{t.name}</span>
+                </div>
+              ))}
             </div>
 
             <div >
@@ -67,8 +60,14 @@ const About = () => {
                   onClick={() => {
                     window.open(cv, '_blank', 'noopener, noreferrer');
                   }}
-                  className='text-[16px] font-medium hover:bg-gradient-to-r hover:from-secondary hover:to-primary transform ease-in-out transition-colors duration-300 border border-primary px-6 py-2 rounded-lg bg-white/5 shadow-2xl hover:scale-101  hover:shadow-primary'>Download CV</button>
-                <a href='#contact' className='text-center text-[16px] font-medium border bg-gradient-to-r from-primary to-secondary border-primary px-6 py-2 rounded-lg shadow-2xl shadow-primary hover:scale-101'>Get in Touch</a>
+                  className='flex gap-2 items-center text-[16px] font-medium hover:bg-gradient-to-r hover:from-secondaryColor hover:to-primaryColor transform ease-in-out transition-colors duration-300 border border-primaryColor px-6 py-2 rounded-lg bg-white/5 shadow-2xl hover:scale-101  hover:shadow-primaryColor'>
+                  <FaDownload />
+                  <p>Download CV</p>
+                </button>
+                <a href='#contact' className='flex gap-2 items-center text-center text-[16px] font-medium border bg-gradient-to-r from-primaryColor to-secondaryColor border-primaryColor px-6 py-2 rounded-lg shadow-2xl shadow-primaryColor hover:scale-101'>
+                  <FaRocket />
+                  <p>Get in Touch</p>
+                </a>
 
               </div>
             </div>

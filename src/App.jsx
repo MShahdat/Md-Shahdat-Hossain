@@ -2,13 +2,12 @@ import React from 'react';
 import Nav from './component/Nav';
 import Hero from './component/Hero';
 import About from './component/About';
-import Education from './component/Education';
 import Projects from './component/Projects';
-import Tools from './component/Tools';
 import Skill from './component/Skills';
 import Contact from './component/Contact';
 import {ToastContainer, Zoom} from 'react-toastify'
 import ScrollToTop from './scroll/ScrollTop';
+import Services from './component/Services';
 
 
 const App = () => {
@@ -17,10 +16,9 @@ const App = () => {
       <Nav />
       <Hero />
       <About />
-      <Education />
-      <Tools />
       <Skill />
       <Projects />
+      <Services/>
       <Contact />
       <ToastContainer
         position="top-right"

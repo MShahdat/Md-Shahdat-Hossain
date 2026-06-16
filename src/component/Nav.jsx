@@ -46,9 +46,9 @@ const Nav = () => {
   const navitem = [
     { path: '#home', link: 'Home', icon: <FaHome /> },
     { path: '#about', link: 'About', icon: <MdManageAccounts /> },
-    { path: '#education', link: 'Education', icon: <IoSchool /> },
-    { path: '#skills', link: 'Skills', icon: <LuNotebookPen /> },
-    { path: '#projects', link: 'Projects', icon: <GrProjects /> },
+    { path: '#skills', link: 'Skills', icon: <LuNotebookPen /> },  { path: '#projects', link: 'Projects', icon: <GrProjects /> },
+    { path: '#services', link: 'Service', icon: <MdManageAccounts /> },
+    // { path: '#education', link: 'Education', icon: <IoSchool /> },
     { path: '#contact', link: 'Contact', icon: <MdContactPhone /> },
   ]
 
@@ -77,19 +77,19 @@ const Nav = () => {
 
 
   return (
-    <div className={`sticky left-0 top-0 z-50 w-full bg-black text-white border-b border-primary/20`}>
-      <nav className='max-w-7xl px-4 py-4 mx-auto flex items-center justify-between'>
+    <div className={`sticky left-0 top-0 z-50 w-full bg-[#030014] text-white border-b border-primaryColor/15`}>
+      <nav className='max-w-6xl px-4 py-4 mx-auto flex items-center justify-between'>
         <div className='flex items-center gap-4'>
           <div onClick={() => {
             setOpen(!open)
-          }} className={`block md:hidden text-primary border border-secondary rounded-md px-2 py-0.5`}>
+          }} className={`block md:hidden text-primaryColor border border-secondaryColor rounded-md px-2 py-0.5`}>
             {open ? <RxCross2 className='size-6 md:size-8' /> : <IoMdMenu className='size-6 md:size-8'/>}
           </div>
-          <a href='#home' className='text-xl text-primary sm:text-xl lg:text-2xl font-bold uppercase'>
+          <a href='#home' className='text-xl text-primaryColor sm:text-xl lg:text-2xl font-bold uppercase'>
             <div className='flex gap-1 items-center'>
-              <h3 className='tracking-wide flex flex-col leading-tight shadow-2xl shadow-primary'>Shahdat <span className='text-[10px] sm:text-[12px] px-1'>Hossain</span></h3>
+              <h3 className='tracking-wide flex flex-col leading-tight bg-linear-to-b from-ternaryColor to-primaryColor bg-clip-text text-transparent'>Shahdat <span className='text-[10px] sm:text-[12px] px-1'>Hossain</span></h3>
             </div>
-            {/* <h1 className='text-xl lg:text-2xl uppercase text-[#6F00FF] font-primary'>Shahdat Hossain</h1> */}
+            {/* <h1 className='text-xl lg:text-2xl uppercase text-[#6F00FF] font-primaryColor'>Shahdat Hossain</h1> */}
           </a>
         </div>
 
@@ -100,7 +100,7 @@ const Nav = () => {
                 key={idx}
                 href={item.path}
                 onClick={() => setActiveSection(item.path)}
-                className={`relative hidden md:block text-[16px] font-semibold tracking-[1px] transition-colors hover:text-primary after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full ${activeSection === item.path ? 'text-primary after:w-full' : ''
+                className={`relative hidden md:block text-[16px] font-semibold tracking-[1px] transition-colors hover:text-primaryColor after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primaryColor after:transition-all after:duration-300 hover:after:w-full ${activeSection === item.path ? 'bg-linear-to-r from-ternaryColor to-primaryColor bg-clip-text text-transparent after:w-full' : ''
                   }`}
               >
                 {item.link}
@@ -109,7 +109,6 @@ const Nav = () => {
           })}
 
         </div>
-
       </nav>
 
       {/* Mobile menu */}
@@ -118,12 +117,12 @@ const Nav = () => {
           <div className='bg-black text-white w-[320px] h-screen'>
             <div className='flex flex-col gap-10 py-8  px-10 md:px-16'>
               <div className='flex flex-col gap-4 items-start'>
-                <img src={me} className='h-32 w-32 rounded-full border-[6px] border-primary object-fill mx-auto'></img>
+                <img src={me} className='h-32 w-32 rounded-full border-[6px] border-primaryColor object-fill mx-auto'></img>
                 <h2 className='text-[24px] font-medium'>Md. Shahdat Hossain</h2>
                 <div className='flex gap-3'>
                   {
                     link.map((li, idx) => (
-                      <a href={li.to} target='_blank' key={idx} className='flex flex-col items-center justify-center size-9 rounded-full bg-primary'>
+                      <a href={li.to} target='_blank' key={idx} className='flex flex-col items-center justify-center size-9 rounded-full bg-linear-to-b from-ternaryColor/70 to-primaryColor/70'>
                         {
                           li.icon
                         }
@@ -137,7 +136,7 @@ const Nav = () => {
                   navitem.map((item, idx) => (
                     <a onClick={() => {
                       setOpen(!open)
-                    }} key={idx} href={item.path} className={`flex items-center gap-3 ${activeSection === item.path ? 'text-primary underline' : ''
+                    }} key={idx} href={item.path} className={`flex items-center gap-3 ${activeSection === item.path ? 'text-primaryColor underline' : ''
                       }`}>
                       <span className='text-[18px]'>{item.icon}</span>
                       <h2 className='text-[17px] font-medium'>{item.link}</h2>

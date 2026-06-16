@@ -18,8 +18,8 @@ const ScrollToTop = ({ showAfter = 200 }) => {
     <button
       onClick={goTop}
       aria-label="Scroll to top"
-      className="max-w-7xl mx-auto fixed bottom-6 right-6 z-50 h-10 w-10 rounded-full bg-primary text-white shadow-lg
-                 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-white/60
+      className="max-w-7xl mx-auto fixed bottom-6 right-6 z-50 h-10 w-10 rounded-full bg-primaryColor text-white shadow-lg
+                 hover:bg-primaryColor focus:outline-none focus:ring-2 focus:ring-white/60
                  flex items-center justify-center transition animate-bounce"
     >
       {/* Up arrow icon */}

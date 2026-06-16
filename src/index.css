@@ -1,19 +1,27 @@
 @import "tailwindcss";
-
+/* @plugin "daisyui"; */
 
 @theme {
 
-  --font-lora: "Lora", "serif";
-  --font-roboto: "Roboto", "sans-serif";
-  --font-monsterrat: "Montserrat", "sans-serif";
-  --font-manrope: "Manrope", "sans-serif";
 
-
-  --color-primary: #6F00FF;
-  --color-secondary: #0046FF;
+  --color-primaryColor: #16A9E3;
+  --color-secondaryColor: #0046FF;
+  --color-ternaryColor: #3EE09A
 
 }
 
 html{
   scroll-behavior: smooth;
 }
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-1 { animation: float 3s ease-in-out infinite; }
+.float-2 { animation: float 3s ease-in-out infinite 0.5s; }
+.float-3 { animation: float 3s ease-in-out infinite 1s; }
+.float-4 { animation: float 3s ease-in-out infinite 1.5s; }
+

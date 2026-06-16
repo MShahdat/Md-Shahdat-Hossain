@@ -174,8 +174,8 @@ const Tools = () => {
       <div className='max-w-7xl px-4 py-16 mx-auto'>
         <div>
           <div className='pb-16'>
-            <h1 className='text-3xl lg:text-4xl font-bold text-center text-primary tracking-wider bg-white/5 shadow-2xl shadow-primary w-fit mx-auto'>Tools & Technologies</h1>
-            <div className='mt-3 w-[160px] lg:w-[200px] mx-auto h-[3px] rounded-2xl bg-primary'></div>
+            <h1 className='text-3xl lg:text-4xl font-bold text-center text-primaryColor tracking-wider bg-white/5 shadow-2xl shadow-primaryColor w-fit mx-auto'>Tools & Technologies</h1>
+            <div className='mt-3 w-[160px] lg:w-[200px] mx-auto h-[3px] rounded-2xl bg-primaryColor'></div>
           </div>
 
           <Marquee
