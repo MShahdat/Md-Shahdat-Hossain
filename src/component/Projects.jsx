@@ -123,13 +123,13 @@ const Projects = () => {
                 <div key={idx} className='group border border-primaryColor/20 rounded-b-xl hover:scale-103 duration-700 transition-all hover:shadow-xl hover:shadow-primaryColor/20'>
                   <div className={`relative w-full h-52 ${item.bgcolor}`}>
                     <div className='group-hover:opacity-0 hover:scale-75 duration-300 transition-all absolute inset-0 items-center justify-center flex'>
-                      <div className='text-7xl'>{item.cover}</div>
+                      <div className='text-7xl opacity-0 md:opacity-100'>{item.cover}</div>
                     </div>
-                    <div className='group-hover:bg-secondaryColor/5 absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 hover:duration-700 transition-all delay-75'>
-                      <a href={item.live} target='_blank' className=' flex flex-col items-center justify-center bg-primaryColor/40 w-12 h-12 rounded-full'>
+                    <div className='group-hover:bg-secondaryColor/5 absolute inset-0 flex items-center justify-center gap-4 opacity-100 md:opacity-0 group-hover:opacity-100 hover:duration-700 transition-all delay-75'>
+                      <a href={item.live} target='_blank' className=' flex flex-col items-center justify-center bg-primaryColor/80 w-12 h-12 rounded-full'>
                         <LuExternalLink className='size-7' />
                       </a>
-                      <a href={item.github} target='_blank' className=' flex flex-col items-center justify-center bg-secondaryColor/40 w-12 h-12 rounded-full'>
+                      <a href={item.github} target='_blank' className=' flex flex-col items-center justify-center bg-secondaryColor/80 w-12 h-12 rounded-full'>
                         <FaGithub className='size-7' />
                       </a>
                     </div>

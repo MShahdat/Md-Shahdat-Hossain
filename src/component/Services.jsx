@@ -1,24 +1,25 @@
-
+import { FaCode } from "react-icons/fa";
 import { GrServices } from "react-icons/gr";
 import { IoSchoolSharp } from "react-icons/io5";
-
+import { FaDatabase } from "react-icons/fa6";
+import { FaComputer } from "react-icons/fa6";
 const service = [
   {
-    icon: <IoSchoolSharp/>,
+    icon: <FaComputer/>,
     iconColor: 'bg-secondaryColor/50',
     bg: 'bg-primaryColor/15',
     title: 'Full-Stack Web Development',
     des: 'End-to-end web apps with React, Next.js, Node.js, and PostgreSQL from pixel-perfect UI to scalable server logic.',
   },
   {
-    icon: <IoSchoolSharp/>,
+    icon: <FaCode/>,
     iconColor: 'bg-primaryColor/50',
     bg: 'bg-ternaryColor/15',
     title: 'API Design & Development',
     des: 'RESTful APIs built with Node.js and TypeScript secure with JWT auth, well-structured, documented, and production-ready.',
   },
   {
-    icon: <IoSchoolSharp/>,
+    icon: <FaDatabase/>,
     iconColor: 'bg-ternaryColor/40',
     bg: 'bg-secondaryColor/15',
     title: 'Database Design',

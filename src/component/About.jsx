@@ -47,7 +47,7 @@ const About = () => {
             {/* tech */}
             <div className='mt-8 flex flex-wrap items-center gap-2'>
               {tech.map((t, idx) => (
-                <div key={idx} className='flex items-center gap-2 border border-primaryColor/30 font-semibold text-ternaryColor bg-ternaryColor/12 px-4 py-1.5 rounded-full'>
+                <div key={idx} className='flex items-center gap-2 border border-primaryColor/30 font-semibold text-ternaryColor bg-ternaryColor/12 px-4 py-1 rounded-full'>
                   <span className='size-4 flex items-center justify-center'>{t.icon}</span>
                   <span>{t.name}</span>
                 </div>
@@ -60,11 +60,11 @@ const About = () => {
                   onClick={() => {
                     window.open(cv, '_blank', 'noopener, noreferrer');
                   }}
-                  className='flex gap-2 items-center text-[16px] font-medium hover:bg-gradient-to-r hover:from-secondaryColor hover:to-primaryColor transform ease-in-out transition-colors duration-300 border border-primaryColor px-6 py-2 rounded-lg bg-white/5 shadow-2xl hover:scale-101  hover:shadow-primaryColor'>
+                  className='w-fit flex gap-2 items-center text-[16px] font-medium hover:bg-linear-to-r hover:from-secondaryColor hover:to-primaryColor transform ease-in-out transition-colors duration-300 border border-primaryColor px-6 py-2 rounded-lg bg-white/5 shadow-2xl hover:scale-101  hover:shadow-primaryColor'>
                   <FaDownload />
                   <p>Download CV</p>
                 </button>
-                <a href='#contact' className='flex gap-2 items-center text-center text-[16px] font-medium border bg-gradient-to-r from-primaryColor to-secondaryColor border-primaryColor px-6 py-2 rounded-lg shadow-2xl shadow-primaryColor hover:scale-101'>
+                <a href='#contact' className='w-fit flex gap-2 items-center text-center text-[16px] font-medium border bg-linear-to-r from-ternaryColor to-primaryColor border-primaryColor px-6 py-2 rounded-lg shadow-2xl shadow-primaryColor hover:scale-101'>
                   <FaRocket />
                   <p>Get in Touch</p>
                 </a>

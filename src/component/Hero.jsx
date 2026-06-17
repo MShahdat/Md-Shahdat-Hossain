@@ -114,22 +114,22 @@ const Hero = () => {
           <div className='relative bg-green-00 flex flex-col items-center w-full justify-center bg-red-00'>
 
             {/* badge */}
-            <div className='float-1 absolute top-8 lg:top-30 right-36 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
+            <div className='opacity-0 md:opacity-100 float-1 absolute top-8 lg:top-30 right-36 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
               <span className='size-4 flex items-center justify-center'>{reactSvg}</span>
               <p>React.js</p>
             </div>
 
-            <div className='float-2 absolute top-8 lg:top-15 left-10 lg:-left-30 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
+            <div className='opacity-0 md:opacity-100 float-2 absolute top-8 lg:top-15 left-10 lg:-left-30 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
               <span className='size-4 flex items-center justify-center'>{nodeSvg}</span>
               <p>Node.js</p>
             </div>
 
-            <div className='float-3 absolute bottom-25 right-20 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
+            <div className='opacity-0 md:opacity-100 float-3 absolute bottom-25 right-20 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
               <span className='size-4 flex items-center justify-center'>{tsSvg}</span>
               <p>TypeScript</p>
             </div>
 
-            <div className='float-4 absolute bottom-8 lg:bottom-35 left-10 lg:-left-20 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
+            <div className='opacity-0 md:opacity-100 float-4 absolute bottom-8 lg:bottom-35 left-10 lg:-left-20 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
               <span className='size-4 flex items-center justify-center'>{postgresqlSvg}</span>
               <p>PostgreSQL</p>
             </div>
