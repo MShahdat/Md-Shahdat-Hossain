@@ -48,7 +48,7 @@ const Contact = () => {
   }
 
   return (
-    <div id='contact' className='bg-[#02000c] text-white'>
+    <div id='contact' className='bg-[#010f09] text-white'>
       <div className='max-w-7xl px-4 py-16 mx-auto'>
         <div className='flex flex-col items-center gap-4'>
           <div className='w-fit flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1.5 tracking-normal border border-secondaryColor/50 bg-ternaryColor/20 rounded-full shadow-2xl shadow-primaryColor text-primaryColor'>
@@ -147,7 +147,7 @@ const Contact = () => {
               </div>
 
               <div className='flex justify-between items-center gap-6'>
-                <button className='flex items-center justify-center gap-4 px-4 py-2 border-2 rounded-lg border-primaryColor/40 w-full bg-gradient-to-r from-primaryColor to-secondaryColor border-primaryColor shadow-2xl shadow-primaryColor'>
+                <button className='flex items-center justify-center gap-4 px-4 py-2 border-2 rounded-lg border-primaryColor w-full bg-linear-to-r from-ternaryColor via-primaryColor to-secondaryColor shadow-2xl shadow-primaryColor'>
                   <FaLocationArrow />
                   <input type="submit" />
                 </button>

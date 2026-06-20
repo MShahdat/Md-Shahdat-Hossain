@@ -67,7 +67,7 @@ const Hero = () => {
   }, [text, isDeleting, index]);
 
   return (
-    <div id='home' className='relative bg-[#030014] text-white overflow-auto'>
+    <div id='home' className='relative bg-[#060121] text-white overflow-auto'>
       <div className='max-w-6xl px-4 py-4 mx-auto'>
         <div className='grid grid-cols-1 bg-primaryColor/0 lg:grid-cols-2 space-y-8 space-x-4'>
           <div className=' bg-red-00 flex flex-col gap-3 items-start lg:py-12'>
@@ -148,7 +148,7 @@ const Hero = () => {
                 <div><span className='text-purple-400'>const</span> developer = {'{'}</div>
                 <div className='pl-5'>name: <span className='text-ternaryColor'>'Md. Shahdat Hossain'</span>,</div>
                 <div className='pl-5'>role: <span className='text-ternaryColor'>'Full-Stack Developer'</span>,</div>
-                <div className='pl-5'>skills: [<span className='text-secondaryColor'>'React'</span>, <span className='text-secondaryColor'>'Node.js'</span>, <span className='text-secondaryColor'>'TypeScript'</span>],</div>
+                <div className='pl-5'>skills: [<span className='text-secondaryColor'>'React'</span>, <span className='text-secondaryColor'>'Node.js'</span>, <span className='text-secondaryColor'>'Prisma'</span>],</div>
                 <div className='pl-5'>passion: <span className='text-ternaryColor'>'Building scalable apps'</span>,</div>
                 <div className='pl-5'>available: <span className='text-primaryColor'>true</span>,</div>
                 <div>{'}'};</div>

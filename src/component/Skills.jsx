@@ -68,7 +68,7 @@ const Skill = () => {
     return () => observer.disconnect();
   }, []);
   return (
-    <div id='skills' ref={sectionRef} className='bg-[#030014] text-white'>
+    <div id='skills' ref={sectionRef} className='bg-[#01100d] text-white'>
       <div className='max-w-6xl px-4 py-16 mx-auto'>
         <div className='flex flex-col items-center gap-4'>
           <div className='w-fit flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1.5 tracking-normal border border-secondaryColor/50 bg-ternaryColor/20 rounded-full shadow-2xl shadow-primaryColor text-primaryColor'>

@@ -6,21 +6,21 @@ import { FaComputer } from "react-icons/fa6";
 const service = [
   {
     icon: <FaComputer/>,
-    iconColor: 'bg-secondaryColor/50',
+    iconColor: 'bg-secondaryColor/60',
     bg: 'bg-primaryColor/15',
     title: 'Full-Stack Web Development',
     des: 'End-to-end web apps with React, Next.js, Node.js, and PostgreSQL from pixel-perfect UI to scalable server logic.',
   },
   {
     icon: <FaCode/>,
-    iconColor: 'bg-primaryColor/50',
+    iconColor: 'bg-primaryColor/60',
     bg: 'bg-ternaryColor/15',
     title: 'API Design & Development',
     des: 'RESTful APIs built with Node.js and TypeScript secure with JWT auth, well-structured, documented, and production-ready.',
   },
   {
     icon: <FaDatabase/>,
-    iconColor: 'bg-ternaryColor/40',
+    iconColor: 'bg-ternaryColor/60',
     bg: 'bg-secondaryColor/15',
     title: 'Database Design',
     des: 'Efficient PostgreSQL schemas with Prisma ORM normalized, indexed, and optimized for performance and data integrity.',

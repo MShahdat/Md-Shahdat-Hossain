@@ -77,7 +77,7 @@ const Nav = () => {
 
 
   return (
-    <div className={`sticky left-0 top-0 z-50 w-full bg-[#030014] text-white border-b border-primaryColor/15`}>
+    <div className={`sticky left-0 top-0 z-50 w-full bg-[#060121] text-white border-b border-primaryColor/15`}>
       <nav className='max-w-6xl px-4 py-4 mx-auto flex items-center justify-between'>
         <div className='flex items-center gap-4'>
           <div onClick={() => {
