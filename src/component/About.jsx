@@ -2,7 +2,7 @@
 import me from '/shahdat1.png';
 import cv from '/Md-Shahdat-Hossain-cv.pdf'
 import { FaDownload, FaRocket } from "react-icons/fa6";
-import { jsSvg, nextSvg, nodeSvg, postgresqlSvg, reactSvg, tsSvg } from '../utility/svg';
+import { jsSvg, nextSvg, nodeSvg, postgresqlSvg, prismaSvg, reactSvg, tsSvg } from '../utility/svg';
 
 const About = () => {
 
@@ -13,6 +13,7 @@ const About = () => {
     { icon: tsSvg, name: 'TypeScript' },
     { icon: postgresqlSvg, name: 'PostgreSQL' },
     { icon: nextSvg, name: 'Next.js' },
+    { icon: prismaSvg, name: 'Prisma' },
   ];
 
   return (

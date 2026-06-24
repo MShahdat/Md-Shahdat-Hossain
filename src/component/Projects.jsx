@@ -42,7 +42,7 @@ const project = [
     tools: ['React', 'Tailwind CSS', 'Daisy UI', 'Motion'],
     category: 'React',
     des: 'A real estate platform built with React, offering property listings, advanced search, and a seamless user experience',
-    live: 'https://veltrio-real-estate-website.netlify.app/',
+    live: 'https://veltrio-estate.vercel.app/',
     github: 'https://github.com/MShahdat/Veltrio-Estates---A-Real-Estate-Website',
     bgcolor: 'bg-primaryColor/30',
     hbg: 'group-hover:bg-primaryColor/40'
@@ -53,7 +53,7 @@ const project = [
     tools: ['React', 'Tailwind CSS', 'Firebase'],
     category: 'React',
     des: 'A restaurant web app featuring dynamic menus, table reservations, and user authentication',
-    live: 'https://teste-io-restaurent.netlify.app/',
+    live: 'https://teste-io-restaurant.vercel.app/',
     github: 'https://github.com/MShahdat/Teste.io_Restaurant',
     bgcolor: 'bg-secondaryColor/20',
     hbg: 'group-hover:bg-secondaryColor/40'

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import resume from '/Md-Shahdat-Hossain-cv.pdf'
+import resume from '/Md-Shahdat-Hossain-resume.pdf'
 import { FaDownload } from "react-icons/fa6";
 import { FaRocket } from "react-icons/fa6";
 import { IoLogoReact } from "react-icons/io5";

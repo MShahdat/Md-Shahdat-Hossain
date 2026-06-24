@@ -8,6 +8,42 @@ export const reactSvg = (
   </svg>
 );
 
+
+export const prismaSvg = (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Outer triangle */}
+    <path
+      d="M12 2L2 19.5H22L12 2Z"
+      stroke="#5A67D8"
+      strokeWidth="1.2"
+      strokeLinejoin="round"
+      fill="none"
+    />
+    {/* Inner vertical line — center split */}
+    <line
+      x1="12"
+      y1="2"
+      x2="12"
+      y2="19.5"
+      stroke="#5A67D8"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+    />
+    {/* Left face fill */}
+    <path
+      d="M12 2L2 19.5H12V2Z"
+      fill="#5A67D8"
+      opacity="0.3"
+    />
+    {/* Right face fill */}
+    <path
+      d="M12 2L22 19.5H12V2Z"
+      fill="#5A67D8"
+      opacity="0.15"
+    />
+  </svg>
+);
+
 export const jsSvg = (
   <svg viewBox="0 0 24 24" fill="none">
     <rect width="24" height="24" rx="2" fill="#F7DF1E" />
