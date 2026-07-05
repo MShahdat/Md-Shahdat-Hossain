@@ -1,53 +1,11 @@
 import React, { useState } from 'react';
-import { FaCalendar } from "react-icons/fa6";
 import { BiSolidSchool } from "react-icons/bi";
-import { IoSchool } from "react-icons/io5";
-import { IoSchoolSharp } from "react-icons/io5";
+import { IoSchoolSharp, IoSchool } from "react-icons/io5";
 import { jsSvg, nextSvg, nodeSvg, postgresqlSvg, prismaSvg, reactSvg, tsSvg } from '../utility/svg';
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot,  } from "react-icons/fa6";
 import EduCard from '../utility/eduCard';
-
-
-const eduData = [
-  {
-    id: 1,
-    year: '2021 - 2025',
-    date: "Oct 2021 – Sep 2025",
-    degree: "Bachelor of Computer Science and Engineering (CSE)",
-    institute: "Green University of Bangladesh",
-    location: "Purbachal, American City",
-    description:
-      "Built REST APIs with Express, Prisma, and PostgreSQL, focusing on authentication, validation, and error handling best practices.",
-    tags: ["DSA", "Networking", "Operating System", "Database", "Machine Learning"],
-  },
-  {
-    id: 2,
-    year: '2018 - 2020',
-    date: "July 2018 – April 2020",
-    degree: "Higher Secondary Certificate (HSC)",
-    institute: "Dania College, Dhaka",
-    location: "Jatrabari, Dhaka",
-    description:
-      "Completed HSC in the Science group, developing a strong foundation in ICT, Mathematics, Physics and Chemistry.",
-    tags: ["ICT", "Physics", "Chemistry", "Mathematics"],
-  },
-];
-
-const cerData = [
-  {
-    id: 1,
-    year: '2025',
-    date: "Nov 2024 – Feb 2025",
-    degree: "Python with Django – 80 Hours",
-    institute: "Green University of Bangladesh",
-    location: "Green University",
-    description:
-      "Institute of Information Technology (IIT), Jahangirnagar University — EDGE Programme, Bangladesh Computer Council.",
-    tags: ["Python", "Django"],
-    credential:
-      "https://drive.google.com/file/d/1xyeIBClkPlLl5cM1ldbbp9Fm0stp-Rot/view?usp=drive_link", // optional
-  },
-];
+import { cerData, eduData } from '../data/data';
+import Heading from '../utility/heading';
 
 
 const Education = () => {
@@ -61,15 +19,13 @@ const inactiveBtn =
   return (
     <div id='education' className='bg-white dark:bg-background text-black dark:text-white'>
       <div className='max-w-7xl px-4 py-16 mx-auto'>
-        <div className='flex flex-col items-center gap-4'>
-          <div className='w-fit flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1.5 tracking-normal border border-secondaryColor/50 bg-ternaryColor/20 rounded-full shadow-2xl shadow-primaryColor text-ternaryColor'>
-            <IoSchoolSharp />
-            <p className=' font-bold text-[13px] md:text-[14px] uppercase whitespace-pre tracking-wide'>Education</p>
-          </div>
-          <h1 className='text-3xl md:text-4xl font-bold bg-linear-to-r from-ternaryColor via-primaryColor to-secondaryColor bg-clip-text text-transparent'>Education & Certificate</h1>
-          <p className=' leading-tight text-md md:text-lg tracking-normal font-mono text-center text-neutral-700 dark:text-neutral-400'>A section of my most impactful technical and educational journey</p>
-        </div>
 
+        <Heading
+          icon={<IoSchoolSharp />}
+          title="Education"
+          subtitle="Education & Certificate"
+          description="A section of my most impactful technical and educational journey"
+        />
 
         <div className='mt-12'>
           <div className='mt-4 flex items-center justify-center gap-4 '>
@@ -107,6 +63,7 @@ const inactiveBtn =
                         />
                       </svg>
                     </div>
+                    
                     <div className={`${idx % 2 == 0 ? 'timeline-start mb-10 md:text-end' : 'timeline-end md:mb-10'}`}>
                       <time className="font-mono italic font-bold text-primaryColor text-lg">{item.year}</time>
                       <EduCard data = {item}/>

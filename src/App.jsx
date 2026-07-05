@@ -10,11 +10,11 @@ import ScrollToTop from './scroll/ScrollTop';
 import Services from './component/Services';
 import Education from './component/Education'
 import ProjectModal from './component/projectModal';
-import { context } from './context/context';
+import { dataContext } from './context/context';
 
 
 const App = () => {
-  const [openProjectModal] = useContext(context);
+  const [openProjectModal] = useContext(dataContext);
 
   return (
     <div className=''>

@@ -1,14 +1,13 @@
 import React, { useRef, useState } from 'react';
 import { MdEmail } from "react-icons/md";
-import { FaLinkedin } from "react-icons/fa";
-import { FaRegCopy } from "react-icons/fa6";
-import { FaLocationArrow, FaGithubSquare } from "react-icons/fa";
+import { FaRegCopy, FaRocket } from "react-icons/fa6";
+import { FaLocationArrow, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import { IoMdCall } from "react-icons/io";
 import emailjs from '@emailjs/browser';
 import { GrServices } from "react-icons/gr";
 import { IoSchoolSharp } from "react-icons/io5";
-import { FaRocket } from "react-icons/fa6";
+import Heading from '../utility/heading';
 
 
 const blockedDomains = [
@@ -114,14 +113,13 @@ const Contact = () => {
   return (
     <div id='contact' className='dark:bg-background bg-white text-black dark:text-white'>
       <div className='max-w-7xl px-4 py-16 mx-auto'>
-        <div className='flex flex-col items-center gap-4'>
-          <div className='w-fit flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1.5 tracking-normal border border-secondaryColor/50 bg-ternaryColor/20 rounded-full shadow-2xl shadow-primaryColor text-ternaryColor'>
-            <FaRocket />
-            <p className=' font-bold text-[13px] md:text-[14px] uppercase whitespace-pre tracking-wide'>Get In Touch</p>
-          </div>
-          <h1 className='text-3xl md:text-4xl font-bold bg-linear-to-r from-ternaryColor via-primaryColor to-secondaryColor bg-clip-text text-transparent'>Let's Work Together</h1>
-          <p className=' leading-tight text-md md:text-lg text-center font-mono dark:text-neutral-400 text-neutral-700'>Have a project in mind? I'd love to hear about it.</p>
-        </div>
+
+        <Heading
+          icon={<FaRocket />}
+          title="Get In Touch"
+          subtitle="Let's Work Together"
+          description="Have a project in mind? I'd love to hear about it"
+        />
 
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-3 mt-16 md:px-8'>
@@ -180,17 +178,6 @@ const Contact = () => {
                   <p className='mt-1 px-6 tracking-wider dark:group-hover:text-primary transform easy-in-out duration-300'>+8801885374041</p>
                 </div>
               </div>
-              {/* <div className=' border rounded-lg mt-4 border-primaryColor/20 p-4 group'>
-                <div className='flex items-center gap-2'>
-                  <span className='text-[19px] text-primaryColor'>
-                    <FaMapLocationDot />
-                  </span>
-                  <p className='text-[16px] text-white/60'>Location</p>
-                </div>
-                <div className='flex items-center justify-between'>
-                  <p className='mt-1 px-6 tracking-wider group-hover:text-primaryColor'>Dhaka, Bangladesh</p>
-                </div>
-              </div> */}
             </div>
           </div>
           <div className='border border-primaryColor/20 px-4 md:px-10 py-4 dark:bg-black/15 backdrop-blur-2xl rounded-lg'>

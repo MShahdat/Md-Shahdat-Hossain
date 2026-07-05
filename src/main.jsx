@@ -7,7 +7,7 @@ import Context from './context/context.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Context>
-      <App />
+      <App/>
     </Context>
   </StrictMode>,
 )

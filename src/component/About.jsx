@@ -4,6 +4,8 @@ import cv from '/Md-Shahdat-Hossain-cv.pdf'
 import { FaDownload, FaRocket } from "react-icons/fa6";
 import { expressSvg, jsSvg, nextSvg, nodeSvg, postgresqlSvg, prismaSvg, reactSvg, tsSvg } from '../utility/svg';
 import { GrUserManager } from "react-icons/gr";
+import Heading from '../utility/heading';
+import { Hover3D } from '../utility/Hover3D';
 
 
 const About = () => {
@@ -13,7 +15,7 @@ const About = () => {
     { icon: jsSvg, name: 'JavaScript' },
     { icon: nodeSvg, name: 'Node.js' },
     { icon: tsSvg, name: 'TypeScript' },
-    {icon: expressSvg, name: 'Express.js'},
+    { icon: expressSvg, name: 'Express.js' },
     { icon: postgresqlSvg, name: 'PostgreSQL' },
     { icon: nextSvg, name: 'Next.js' },
     { icon: prismaSvg, name: 'Prisma' },
@@ -22,26 +24,21 @@ const About = () => {
   return (
     <div id='about' className='bg-white dark:bg-background text-black dark:text-white'>
       <div className='max-w-7xl px-4 py-12 mx-auto'>
-        <div className='flex flex-col items-center'>
-          <div className='w-fit flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1 tracking-normal border border-secondaryColor/50 bg-primaryColor/20 rounded-full shadow-2xl shadow-primaryColor text-ternaryColor'>
-            <GrUserManager/>
-            <p className='font-bold text-[13px] md:text-[14px] uppercase whitespace-pre tracking-wide'>About Me</p>
-          </div>
-        </div>
+        <Heading
+          icon={<GrUserManager />}
+          title="About"
+        />
 
         <div className='mt-6 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4 xl:gap-0 '>
           <div className='order-2 md:order-1 bg-green-00 h-full w-full flex items-center justify-center relative'>
             <div className=' w-4/5 sm:w-3/5 md:w-full lg:w-4/5 mx-auto'>
               <div className='absolute inset-0 bg-linear-to-r from-ternaryColor/0 via-primaryColor/0 to-secondaryColor/0 rounded-2xl blur-2xl opacity-20'></div>
 
-              <div className='relative border border-primaryColor/30 rounded-2xl overflow-hidden shadow-2xl shadow-primaryColor/60 dark:shadow hover:shadow-primaryColor/60 transform transition-all duration-300 hover:scale-[1.02]'>
+             <Hover3D>
+               <div className='relative border border-primaryColor/30 rounded-2xl overflow-hidden shadow-2xl shadow-primaryColor/60 dark:shadow hover:shadow-primaryColor/60 transform transition-all duration-300 hover:scale-[1.02]'>
                 <img src={me} className='w-full h-[340px] sm:h-[480px] md:h-[520px] object-cover' />
               </div>
-
-              {/* <div className='absolute bottom-6 left-4 md:-bottom-8 md:-left-6 flex flex-col items-center justify-center border border-primaryColor/50 bg-gradient-to-br from-primaryColor to-secondaryColor px-4 py-3 rounded-xl shadow-xl shadow-primaryColor'>
-                  <span className='text-2xl font-bold text-white'>2+</span>
-                  <span className='text-xs font-medium text-white whitespace-nowrap'>Years Exp</span>
-                </div> */}
+             </Hover3D>
             </div>
           </div>
           <div className=' order-2 md:order-2 border-primaryColor/20 px-2 py-0 pb-4 bg-white/0 rounded-lg shadow-sm transform ease-in-out duration-300 hover:border-primaryColor/60'>

@@ -8,7 +8,6 @@ import { FaLocationDot } from "react-icons/fa6";
 
 
 const eduCard = ({ data }) => {
-  // console.log('props === ', data)
   return (
     <div>
       <div className='mt-4 text-start p-4 md:p-6 border bg-white/5 group border-primaryColor/20 rounded-xl flex flex-col tracking-wider gap-4 group-hover:scale-101 transition-all ease-in-out duration-300 hover:shadow-lg shadow-primaryColor/30'>

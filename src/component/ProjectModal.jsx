@@ -1,16 +1,16 @@
 import React, { useContext, useEffect } from 'react';
-import { context } from '../context/context';
 import { RxCross2 } from "react-icons/rx";
 import { TbListDetails } from "react-icons/tb";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { AiOutlineCluster } from "react-icons/ai";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import { IoSettings } from "react-icons/io5";
+import { dataContext } from '../context/context';
 
 
 
 const ProjectModal = () => {
-  const [openProjectModal, setOpenProjectModal, selectedProject, setSelectedProject, open] = useContext(context);
+  const [openProjectModal, setOpenProjectModal, selectedProject, setSelectedProject, open] = useContext(dataContext);
 
   useEffect(() => {
     if ((openProjectModal && selectedProject) || open) {

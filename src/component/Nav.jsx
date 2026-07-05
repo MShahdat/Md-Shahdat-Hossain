@@ -1,23 +1,23 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
-import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter, FaHome } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter, FaHome, FaMoon } from "react-icons/fa";
 import { MdManageAccounts, MdContactPhone } from "react-icons/md";
 import { LuNotebookPen } from "react-icons/lu";
 import { GrProjects } from "react-icons/gr";
 import me from '/shahdat1.png';
-import { IoSchool } from "react-icons/io5";
-import { FaMoon } from "react-icons/fa";
+import { IoSchool, IoColorPalette } from "react-icons/io5";
 import { FiSun } from "react-icons/fi";
-import { IoColorPalette } from "react-icons/io5";
 import { RiComputerLine } from "react-icons/ri";
 import { SiOpenapiinitiative } from "react-icons/si";
 import resume from '/Md-Shahdat-Hossain-resume.pdf'
-import { context } from '../context/context';
+import { dataContext } from '../context/context';
+
+
 
 
 const Nav = () => {
-  const [,,,,open, setOpen, scrolled, setScrolled, activeSection, setActiveSection] = useContext(context)
+  const [,,,,open, setOpen, scrolled, setScrolled, activeSection, setActiveSection] = useContext(dataContext)
 
   const [theme, setTheme] = useState(
     localStorage.getItem('theme') || 'light'
@@ -131,7 +131,7 @@ const Nav = () => {
             })}
 
           </div>
-          <button onClick={() => handleTheme() } className='flex items-center gap-2'>
+          <button onClick={() => handleTheme() } className=' flex items-center gap-2'>
             {theme === 'light' ? <FiSun className='size-4'/> : <FaMoon className='size-4'/>}
           </button>
           {/* <button onClick={() => {

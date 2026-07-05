@@ -1,35 +1,11 @@
 
 import { FaCode } from "react-icons/fa";
 import React, { useEffect, useRef, useState } from 'react';
-import {SiLatex,SiNetlify,} from "react-icons/si";
+import { SiLatex, SiNetlify, } from "react-icons/si";
 import { cppSvg, daisyUiSvg, figmaSvg, firebaseSvg, githubSvg, gitSvg, javaSvg, pythonSvg, vercelSvg } from "../utility/svg";
+import { skillCategories } from "../data/data";
+import Heading from "../utility/heading";
 
-const skillCategories = [
-  {
-    icon: '💻',
-    title: 'Frontend',
-    skills: [
-      { name: 'Next.Js', level: 60 },
-      { name: 'React.Js', level: 82 },
-      { name: 'Tailwind CSS', level: 80 },
-      { name: 'JavaScript', level: 88 },
-      { name: 'HTML & CSS', level: 85 },
-      // { name: 'CSS', level: 84 },
-
-    ],
-  },
-  {
-    icon: '⚙️',
-    title: 'Backend',
-    skills: [
-      { name: 'TypeScript', level: 85 },
-      { name: 'Node.js', level: 80 },
-      { name: 'Express.js', level: 82 },
-      { name: 'PostgreSQL', level: 83 },
-      { name: 'Prisma', level: 80 },
-    ],
-  },
-];
 
 
 const tools = [
@@ -57,7 +33,7 @@ const Skill = () => {
         if (entry.isIntersecting) {
           setAnimate(true);
           // observer.disconnect(); // only trigger once
-        }else{
+        } else {
           setAnimate(false)
         }
       },
@@ -68,20 +44,19 @@ const Skill = () => {
 
     return () => observer.disconnect();
   }, []);
+
+
   return (
     <div id='skills' ref={sectionRef} className='bg-white dark:bg-background  dark:text-white text-black'>
       <div className='max-w-7xl px-4 py-16 mx-auto'>
-        <div className='flex flex-col items-center gap-4'>
-          <div className='w-fit flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1.5 tracking-normal border border-secondaryColor/50 bg-ternaryColor/20 rounded-full shadow-2xl shadow-primaryColor text-ternaryColor'>
-            <FaCode />
-            <p className=' font-bold text-[13px] md:text-[14px] uppercase whitespace-pre tracking-wide'>Technical Skills</p>
-          </div>
-          <h1 className='text-3xl md:text-4xl font-bold bg-linear-to-r from-ternaryColor via-primaryColor to-secondaryColor bg-clip-text text-transparent'>My Tech Arsenal</h1>
-          <p className=' leading-tight text-md md:text-lg text-center font-mono text-neutral-700 dark:text-neutral-400'>Technologies I use daily to build amazing products</p>
-        </div>
-
+        <Heading
+          icon={<FaCode />}
+          title="Technical Skills"
+          subtitle="My Tech Arsenal"
+          description="Technologies I use daily to build amazing products"
+        />
         <div className='mt-8 md:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-4 bg-red-00'>
-          {skillCategories.map((cat, idx) => (
+          {skillCategories?.map((cat, idx) => (
             <div key={idx} className=' group w-full flex flex-col items-start border border-primaryColor/10 px-2 py-4 bg-white/5 rounded-lg shadow-lg hover:shadow-primaryColor/40 transform ease-in-out duration-300 hover:border-primaryColor/10'>
               <div className='flex items-center gap-2'>
                 <div className='text-3xl'>{cat.icon}</div>
@@ -117,6 +92,7 @@ const Skill = () => {
             </div>
           ))}
         </div>
+
         {/*Language & tools */}
         <div className='mt-8 md:px-8 flex flex-wrap items-center gap-2'>
           {tools.map((t, idx) => {

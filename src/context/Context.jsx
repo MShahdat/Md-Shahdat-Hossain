@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-export const context = createContext()
+export const dataContext = createContext()
 
 const Context = (props) => {
   const [openProjectModal, setOpenProjectModal] = useState(false);
@@ -10,7 +10,7 @@ const Context = (props) => {
   const [activeSection, setActiveSection] = useState('#home');
 
   return (
-    <context.Provider value={[
+    <dataContext.Provider value={[
       openProjectModal,
       setOpenProjectModal,
       selectedProject,
@@ -23,7 +23,7 @@ const Context = (props) => {
       setActiveSection,
     ]}>
       {props.children}
-    </context.Provider>
+    </dataContext.Provider>
   );
 };
 

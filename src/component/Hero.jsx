@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import resume from '/Md-Shahdat-Hossain-resume.pdf'
-import { FaDownload } from "react-icons/fa6";
-import { FaRocket } from "react-icons/fa6";
+import { FaDownload, FaRocket } from "react-icons/fa6";
 import { IoLogoReact } from "react-icons/io5";
 import { jsSvg, nextSvg, nodeSvg, postgresqlSvg, prismaSvg, reactSvg, tsSvg } from '../utility/svg';
 
@@ -67,9 +66,9 @@ const Hero = () => {
 
   return (
     <div id='home' className='relative bg-white dark:bg-background text-black dark:text-white overflow-auto'>
-      <div className='max-w-7xl px-4 py-0 mx-auto'>
+      <div className='max-w-7xl px-4 py-4 mx-auto'>
         <div className='grid grid-cols-1 bg-primaryColor/0 lg:grid-cols-2 space-y-8 space-x-4'>
-          <div className=' bg-red-00 flex flex-col gap-3 items-start lg:py-12'>
+          <div className=' bg-red-00 flex flex-col gap-3 items-start lg:py-8'>
             <div className='flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1 tracking-normal border border-primaryColor/50 bg-ternaryColor rounded-full'>
               <p>👋</p>
               <p className='text-white font-semibold text-[13px] md:text-[14px] uppercase whitespace-pre tracking-wide'>Available for work</p>
@@ -156,11 +155,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          {/* <div className='bg-green-00 flex flex-col items-center w-full justify-center bg-red-00'>
-            <div className=' border border-primaryColor/40 w-9/11 sm:w-3/6 md:w-8/12 rounded-xl px-0 md:px-0 bg-green-00'>
-              <img src={me} className='lg:h-140 h-110 w-full mx-auto rounded-xl object-cover shadow-2xl shadow-primaryColor transform ease-in-out duration-300' />
-            </div>
-          </div> */}
         </div>
       </div>
     </div>
