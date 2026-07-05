@@ -24,6 +24,7 @@ const skillCategories = [
     skills: [
       { name: 'TypeScript', level: 85 },
       { name: 'Node.js', level: 80 },
+      { name: 'Express.js', level: 82 },
       { name: 'PostgreSQL', level: 83 },
       { name: 'Prisma', level: 80 },
     ],
@@ -68,23 +69,23 @@ const Skill = () => {
     return () => observer.disconnect();
   }, []);
   return (
-    <div id='skills' ref={sectionRef} className='bg-[#01100d] text-white'>
-      <div className='max-w-6xl px-4 py-16 mx-auto'>
+    <div id='skills' ref={sectionRef} className='bg-white dark:bg-background  dark:text-white text-black'>
+      <div className='max-w-7xl px-4 py-16 mx-auto'>
         <div className='flex flex-col items-center gap-4'>
-          <div className='w-fit flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1.5 tracking-normal border border-secondaryColor/50 bg-ternaryColor/20 rounded-full shadow-2xl shadow-primaryColor text-primaryColor'>
+          <div className='w-fit flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1.5 tracking-normal border border-secondaryColor/50 bg-ternaryColor/20 rounded-full shadow-2xl shadow-primaryColor text-ternaryColor'>
             <FaCode />
             <p className=' font-bold text-[13px] md:text-[14px] uppercase whitespace-pre tracking-wide'>Technical Skills</p>
           </div>
           <h1 className='text-3xl md:text-4xl font-bold bg-linear-to-r from-ternaryColor via-primaryColor to-secondaryColor bg-clip-text text-transparent'>My Tech Arsenal</h1>
-          <p className=' leading-tight text-md md:text-lg text-center font-mono'>Technologies I use daily to build amazing products</p>
+          <p className=' leading-tight text-md md:text-lg text-center font-mono text-neutral-700 dark:text-neutral-400'>Technologies I use daily to build amazing products</p>
         </div>
 
         <div className='mt-8 md:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-4 bg-red-00'>
           {skillCategories.map((cat, idx) => (
-            <div key={idx} className=' group w-full flex flex-col items-start border border-primaryColor/10 px-2 py-4 bg-white/5 rounded-lg shadow-xl hover:shadow-primaryColor/60 transform ease-in-out duration-300 hover:border-primaryColor/10'>
+            <div key={idx} className=' group w-full flex flex-col items-start border border-primaryColor/10 px-2 py-4 bg-white/5 rounded-lg shadow-lg hover:shadow-primaryColor/40 transform ease-in-out duration-300 hover:border-primaryColor/10'>
               <div className='flex items-center gap-2'>
                 <div className='text-3xl'>{cat.icon}</div>
-                <h1 className='text-2xl md:text-3xl font-medium group-hover:text-primaryColor/80 transition-all duration-300 ease-in-out'>{cat.title}</h1>
+                <h1 className='text-2xl md:text-3xl font-medium group-hover:text-ternaryColor transition-all duration-300 ease-in-out'>{cat.title}</h1>
               </div>
 
               <div className='mt-6 bg-red-00 relative border border-primaryColor/0 py-2 rounded-lg w-full h-full flex'>
@@ -117,7 +118,7 @@ const Skill = () => {
           ))}
         </div>
         {/*Language & tools */}
-        <div className='mt-8 flex flex-wrap items-center gap-2'>
+        <div className='mt-8 md:px-8 flex flex-wrap items-center gap-2'>
           {tools.map((t, idx) => {
             return (
               <div key={idx} className='flex items-center gap-2 border border-primaryColor/50 text-primaryColor font-semibold bg-primaryColor/20 px-4 py-1 rounded-full leading-relaxed'>

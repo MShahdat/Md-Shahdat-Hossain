@@ -4,28 +4,28 @@ import resume from '/Md-Shahdat-Hossain-resume.pdf'
 import { FaDownload } from "react-icons/fa6";
 import { FaRocket } from "react-icons/fa6";
 import { IoLogoReact } from "react-icons/io5";
-import { jsSvg, nextSvg, nodeSvg, postgresqlSvg, reactSvg, tsSvg } from '../utility/svg';
+import { jsSvg, nextSvg, nodeSvg, postgresqlSvg, prismaSvg, reactSvg, tsSvg } from '../utility/svg';
 
 
 const link = [
   {
-    icon: <FaGithub className='size-6 xl:size-7' />,
+    icon: <FaGithub className='size-6' />,
     to: 'https://github.com/MShahdat',
   },
   {
-    icon: <FaLinkedin className='size-6 xl:size-7' />,
+    icon: <FaLinkedin className='size-6 ' />,
     to: 'https://www.linkedin.com/in/md-shahdat-hossain/',
   },
   {
-    icon: <FaFacebook className='size-6 xl:size-7' />,
+    icon: <FaFacebook className='size-6' />,
     to: 'https://www.facebook.com/md.shahdat.hossain.547522/',
   },
   {
-    icon: <FaTwitter className='size-6 xl:size-7' />,
+    icon: <FaTwitter className='size-6' />,
     to: 'https://x.com/MdShahdat25',
   },
   {
-    icon: <FaInstagram className='size-6 xl:size-7' />,
+    icon: <FaInstagram className='size-6' />,
     to: 'https://www.instagram.com/sahadathossain85/',
   },
 
@@ -35,7 +35,6 @@ const expert = [
   'Full-Stack Developer',
   'React & Node.js Expert',
   'Problem Solver',
-  'Open to Opportunities',
   'AI/ML Enthusiast',
 ];
 
@@ -67,34 +66,34 @@ const Hero = () => {
   }, [text, isDeleting, index]);
 
   return (
-    <div id='home' className='relative bg-[#060121] text-white overflow-auto'>
-      <div className='max-w-6xl px-4 py-4 mx-auto'>
+    <div id='home' className='relative bg-white dark:bg-background text-black dark:text-white overflow-auto'>
+      <div className='max-w-7xl px-4 py-0 mx-auto'>
         <div className='grid grid-cols-1 bg-primaryColor/0 lg:grid-cols-2 space-y-8 space-x-4'>
           <div className=' bg-red-00 flex flex-col gap-3 items-start lg:py-12'>
-            <div className='flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1 tracking-normal border border-secondaryColor/50 bg-ternaryColor/20 rounded-full'>
+            <div className='flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1 tracking-normal border border-primaryColor/50 bg-ternaryColor rounded-full'>
               <p>👋</p>
-              <p className='text-primaryColor font-semibold text-[13px] md:text-[14px] uppercase whitespace-pre tracking-wide'>Available for work</p>
+              <p className='text-white font-semibold text-[13px] md:text-[14px] uppercase whitespace-pre tracking-wide'>Available for work</p>
             </div>
             <h3 className='text-[16px] lg:text-[18px] tracking-wider'>Hello, I'm
               <span className='text-[16px]  lg:text-[20px] font-bold text-ternaryColor'> Md. Shahdat Hossain</span>
             </h3>
             <p className='text-4xl lg:text-6xl font-bold leading-tight font-["Syne"]'>
               <p>Full-Stack</p>
-              <p className='-mt-2 bg-linear-to-r from-ternaryColor via-primaryColor to-secondaryColor bg-clip-text text-transparent'>Web Developer</p>
+              <p className='-mt-2 bg-linear-to-r from-ternaryColor to-secondaryColor bg-clip-text text-transparent'>Web Developer</p>
             </p>
             <p className='text-lg lg:text-2xl font-semibold text-ternaryColor'>
               {text}
               <span className='animate-pulse'>|</span>
             </p>
-            <p className='mt-2 lg:mt-4 text-[16px] text-justify text-white/40 lg:text-[17px] leading-relaxed tracking-wider font-mono'>Develop reusable component-based code, design a clean and scalable architecture, robust API development, JWT based secure authentication & authorization and high-performance web application</p>
+            <p className='mt-2 lg:mt-4 text-[16px] text-justify text-neutral-700 dark:text-neutral-400 lg:text-[17px] leading-relaxed tracking-wider font-mono'>Develop reusable component-based code, design a clean and scalable architecture, robust API development, JWT based secure authentication & authorization and high-performance web application</p>
             <div className='mt-4 flex flex-col md:flex-row gap-4 '>
-              <a href='#contact' className='flex items-center gap-2 text-center text-[16px] font-medium border bg-gradient-to-r from-primaryColor to-ternaryColor border-primaryColor px-6 py-2 rounded-lg shadow-2xl shadow-primaryColor hover:scale-101'>
+              <a href='#contact' className='flex items-center gap-2 text-center text-[16px] font-medium bg-ternaryColor text-white px-6 py-2 md:py-2.5 rounded-lg shadow-2xl shadow-primaryColor hover:scale-101'>
                 <FaRocket />
                 <p>Get in Touch</p>
               </a>
               <button onClick={() => {
                 window.open(resume, '_blank', 'noopener, noreferrer');
-              }} className='flex gap-2 items-center text-[16px] font-medium hover:bg-gradient-to-r hover:from-ternaryColor hover:to-primaryColor transform ease-in-out transition-colors duration-300 border border-primaryColor px-6 py-2 rounded-lg bg-white/5 shadow-2xl hover:scale-101  hover:shadow-primaryColor'>
+              }} className='flex gap-2 items-center text-[16px] font-medium hover:bg-ternaryColor transform ease-in-out transition-colors duration-300 hover:text-white px-6 py-2 md:py-2.5 rounded-lg bg-white text-ternaryColor border shadow-2xl hover:scale-101  hover:shadow-primaryColor'>
                 <FaDownload />
                 <p>Download Resume</p>
               </button>
@@ -102,10 +101,8 @@ const Hero = () => {
             <div className='mt-4 flex gap-4'>
               {
                 link.map((li, idx) => (
-                  <a href={li.to} target='_blank' key={idx} className='flex flex-col items-center justify-center size-10  xl:size-12 rounded-full text-primaryColor border border-primaryColor/50 bg-white/5 ring-0 ring-primaryColor hover:ring-2 hover:scale-102 transform ease-in-out duration-300'>
-                    {
-                      li.icon
-                    }
+                  <a href={li.to} target='_blank' key={idx} className='flex flex-col items-center justify-center size-10 rounded-full text-white border border-primaryColor/50 bg-ternaryColor ring-0 ring-primaryColor hover:ring-2 hover:scale-102 transform ease-in-out duration-300'>
+                    <span>{li.icon}</span>
                   </a>
                 ))
               }
@@ -130,11 +127,11 @@ const Hero = () => {
             </div>
 
             <div className='opacity-0 md:opacity-100 float-4 absolute bottom-8 lg:bottom-35 left-10 lg:-left-20 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
-              <span className='size-4 flex items-center justify-center'>{postgresqlSvg}</span>
-              <p>PostgreSQL</p>
+              <span className='size-4 flex items-center justify-center'>{prismaSvg}</span>
+              <p>Prisma</p>
             </div>
 
-            <div className='border border-primaryColor/40 w-full sm:w-3/6 md:w-8/12 lg:w-10/12 rounded-xl bg-black/40 shadow-2xl shadow-primaryColor overflow-hidden font-mono text-sm'>
+            <div className='border border-primaryColor/40 w-full sm:w-5/6 md:w-8/12 lg:w-10/12 rounded-xl bg-black/90 shadow-2xl shadow-primaryColor/50 dark:shadow-primary/20 overflow-hidden font-mono text-sm'>
               {/* Window header */}
               <div className='flex items-center gap-2 px-4 py-2.5 border-b border-primaryColor/20'>
                 <div className='w-3 h-3 rounded-full bg-red-500'></div>
@@ -148,7 +145,7 @@ const Hero = () => {
                 <div><span className='text-purple-400'>const</span> developer = {'{'}</div>
                 <div className='pl-5'>name: <span className='text-ternaryColor'>'Md. Shahdat Hossain'</span>,</div>
                 <div className='pl-5'>role: <span className='text-ternaryColor'>'Full-Stack Developer'</span>,</div>
-                <div className='pl-5'>skills: [<span className='text-secondaryColor'>'React'</span>, <span className='text-secondaryColor'>'Node.js'</span>, <span className='text-secondaryColor'>'Prisma'</span>],</div>
+                <div className='pl-5'>skills: [<span className='text-secondaryColor'>'React'</span>, <span className='text-secondaryColor'>'Node.js'</span>,<span className='text-secondaryColor'>'Express.js'</span>, <span className='text-secondaryColor'>'Prisma'</span>],</div>
                 <div className='pl-5'>passion: <span className='text-ternaryColor'>'Building scalable apps'</span>,</div>
                 <div className='pl-5'>available: <span className='text-primaryColor'>true</span>,</div>
                 <div>{'}'};</div>

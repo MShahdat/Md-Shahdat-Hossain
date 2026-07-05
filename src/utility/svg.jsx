@@ -44,6 +44,25 @@ export const prismaSvg = (
   </svg>
 );
 
+export const expressSvg = (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+    <rect width="24" height="24" rx="4" fill="#000000" />
+    <text
+      x="12"
+      y="15.5"
+      fill="#FFFFFF"
+      fontSize="11"
+      fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+      fontWeight="300"
+      letterSpacing="-0.5"
+      textAnchor="middle"
+    >
+      ex
+    </text>
+  </svg>
+);
+
+
 export const jsSvg = (
   <svg viewBox="0 0 24 24" fill="none">
     <rect width="24" height="24" rx="2" fill="#F7DF1E" />

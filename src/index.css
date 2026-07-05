@@ -1,12 +1,15 @@
 @import "tailwindcss";
-/* @plugin "daisyui"; */
+@plugin "daisyui";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
 
 @theme {
 
-
-  --color-primaryColor: #16A9E3;
-  --color-secondaryColor: #0046FF;
-  --color-ternaryColor: #3EE09A
+  --color-primaryColor: #3b82f6;
+  --color-secondaryColor: #8b5cf6;
+  --color-ternaryColor: #10b981;
+  --color-background: #030014;
 
 }
 
@@ -25,3 +28,14 @@ html{
 .float-3 { animation: float 3s ease-in-out infinite 1s; }
 .float-4 { animation: float 3s ease-in-out infinite 1.5s; }
 
+
+
+/* Hide scrollbar but keep scrolling */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
