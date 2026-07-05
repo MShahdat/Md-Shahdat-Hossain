@@ -84,7 +84,7 @@ const Hero = () => {
               {text}
               <span className='animate-pulse'>|</span>
             </p>
-            <p className='mt-2 lg:mt-4 text-[16px] text-justify text-neutral-700 dark:text-neutral-400 lg:text-[17px] leading-relaxed tracking-wider font-mono'>Develop reusable component-based code, design a clean and scalable architecture, robust API development, JWT based secure authentication & authorization and high-performance web application</p>
+            <p className='mt-2 lg:mt-4 text-[16px] text-neutral-700 dark:text-neutral-400 lg:text-[17px] leading-relaxed tracking-wider font-mono'>Develop reusable component-based code, design a clean and scalable architecture, robust API development, JWT based secure authentication & authorization and high-performance web application</p>
             <div className='mt-4 flex flex-col md:flex-row gap-4 '>
               <a href='#contact' className='flex items-center gap-2 text-center text-[16px] font-medium bg-ternaryColor text-white px-6 py-2 md:py-2.5 rounded-lg shadow-2xl shadow-primaryColor hover:scale-101'>
                 <FaRocket />

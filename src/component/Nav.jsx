@@ -20,7 +20,7 @@ const Nav = () => {
   const [,,,,open, setOpen, scrolled, setScrolled, activeSection, setActiveSection] = useContext(dataContext)
 
   const [theme, setTheme] = useState(
-    localStorage.getItem('theme') || 'light'
+    localStorage.getItem('theme') || 'dark'
   )
 
   useEffect(() => {
