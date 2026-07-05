@@ -7,7 +7,7 @@ import { IoMdCall } from "react-icons/io";
 import emailjs from '@emailjs/browser';
 import { GrServices } from "react-icons/gr";
 import { IoSchoolSharp } from "react-icons/io5";
-import Heading from '../utility/heading';
+import Heading from '../utility/Heading';
 
 
 const blockedDomains = [

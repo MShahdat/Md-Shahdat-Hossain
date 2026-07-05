@@ -9,8 +9,8 @@ import { ToastContainer, Zoom } from 'react-toastify'
 import ScrollToTop from './scroll/ScrollTop';
 import Services from './component/Services';
 import Education from './component/Education'
-import ProjectModal from './component/projectModal';
-import { dataContext } from './context/context';
+import ProjectModal from './component/ProjectModal';
+import { dataContext } from './context/Context';
 
 
 const App = () => {

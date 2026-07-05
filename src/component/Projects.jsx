@@ -7,9 +7,9 @@ import { MdRealEstateAgent } from "react-icons/md";
 import { GiSchoolBag } from "react-icons/gi";
 import { IoSchoolSharp, IoRestaurantSharp, IoLibrary } from "react-icons/io5";
 import { TbListDetails } from "react-icons/tb";
-import { dataContext } from '../context/context';
+import { dataContext } from '../context/Context';
 import { projects } from '../data/data';
-import Heading from '../utility/heading';
+import Heading from '../utility/Heading';
 
 
 

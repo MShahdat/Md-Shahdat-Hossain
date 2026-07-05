@@ -5,7 +5,7 @@ import { jsSvg, nextSvg, nodeSvg, postgresqlSvg, prismaSvg, reactSvg, tsSvg } fr
 import { FaLocationDot,  } from "react-icons/fa6";
 import EduCard from '../utility/eduCard';
 import { cerData, eduData } from '../data/data';
-import Heading from '../utility/heading';
+import Heading from '../utility/Heading';
 
 
 const Education = () => {

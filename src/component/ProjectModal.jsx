@@ -5,7 +5,7 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { AiOutlineCluster } from "react-icons/ai";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import { IoSettings } from "react-icons/io5";
-import { dataContext } from '../context/context';
+import { dataContext } from '../context/Context';
 
 
 

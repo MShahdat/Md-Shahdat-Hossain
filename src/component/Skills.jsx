@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { SiLatex, SiNetlify, } from "react-icons/si";
 import { cppSvg, daisyUiSvg, figmaSvg, firebaseSvg, githubSvg, gitSvg, javaSvg, pythonSvg, vercelSvg } from "../utility/svg";
 import { skillCategories } from "../data/data";
-import Heading from "../utility/heading";
+import Heading from "../utility/Heading";
 
 
 

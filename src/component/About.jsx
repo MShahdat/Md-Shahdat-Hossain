@@ -4,7 +4,7 @@ import cv from '/Md-Shahdat-Hossain-cv.pdf'
 import { FaDownload, FaRocket } from "react-icons/fa6";
 import { expressSvg, jsSvg, nextSvg, nodeSvg, postgresqlSvg, prismaSvg, reactSvg, tsSvg } from '../utility/svg';
 import { GrUserManager } from "react-icons/gr";
-import Heading from '../utility/heading';
+import Heading from '../utility/Heading';
 import { Hover3D } from '../utility/Hover3D';
 
 

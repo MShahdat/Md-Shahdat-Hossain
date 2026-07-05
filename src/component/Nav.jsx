@@ -11,7 +11,7 @@ import { FiSun } from "react-icons/fi";
 import { RiComputerLine } from "react-icons/ri";
 import { SiOpenapiinitiative } from "react-icons/si";
 import resume from '/Md-Shahdat-Hossain-resume.pdf'
-import { dataContext } from '../context/context';
+import { dataContext } from '../context/Context';
 
 
 

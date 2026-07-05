@@ -3,7 +3,7 @@ import { GrServices } from "react-icons/gr";
 import { IoSchoolSharp } from "react-icons/io5";
 import { FaDatabase } from "react-icons/fa6";
 import { FaComputer } from "react-icons/fa6";
-import Heading from "../utility/heading";
+import Heading from "../utility/Heading";
 import { Hover3D } from "../utility/Hover3D";
 
 const service = [
