@@ -46,7 +46,7 @@ const Projects = () => {
                 onClick={() => setSelectCat(c)}
                 className={`cursor-pointer w-fit border font-semibold px-6 py-[3px] rounded-full leading-relaxed transition-colors
         ${selectedCat === c
-                    ? 'border-primaryColor/70 bg-ternaryColor text-white'
+                    ? 'border-primaryColor/70 bg-linear-to-bl from-secondaryColor to-primaryColor text-white'
                     : 'border-primaryColor/30 text-ternaryColor dark:text-white bg-primaryColor/5'
                   }`}
               >

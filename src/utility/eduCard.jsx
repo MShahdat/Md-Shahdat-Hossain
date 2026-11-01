@@ -13,7 +13,7 @@ const eduCard = ({ data }) => {
       <div className='mt-4 text-start p-4 md:p-6 border bg-white/5 group border-primaryColor/20 rounded-xl flex flex-col tracking-wider gap-4 group-hover:scale-101 transition-all ease-in-out duration-300 hover:shadow-lg shadow-primaryColor/30'>
         <div className="flex items-start justify-between">
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-primary to-ternaryColor/80 flex items-center justify-center shadow-lg shadow-purple-900/40">
+            <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-bl from-primaryColor to-secondaryColor flex items-center justify-center shadow-lg shadow-purple-900/40">
               <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 text-white">
                 <path d="M12 3L1 8l11 5 9-4.09V17h2V8L12 3z" fill="currentColor" />
                 <path d="M5 10.18v4.5c0 1.5 3 3.32 7 3.32s7-1.82 7-3.32v-4.5L12 13 5 10.18z" fill="currentColor" />
@@ -51,7 +51,7 @@ const eduCard = ({ data }) => {
           {data.tags.map((tec) => (
             <div
               key={tec}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full dark:bg-ternaryColor/15 bg-primaryColor border border-white/10 text-xs text-white/80 font-medium"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full dark:bg-ternaryColor/25 bg-ternaryColor border border-white/10 text-xs text-white font-medium"
             >
               {tec}
             </div>

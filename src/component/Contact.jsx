@@ -203,7 +203,7 @@ const Contact = () => {
                   className={`flex items-center justify-center gap-4 px-4 py-2 rounded-lg w-full shadow-2xl transition-all duration-300
     ${loading
                       ? "bg-gray-400 cursor-not-allowed"
-                      : "bg-ternaryColor hover:opacity-90 shadow-primaryColor"
+                      : "bg-linear-to-bl from-primaryColor to-secondaryColor hover:opacity-90 shadow-primaryColor"
                     }
     text-white`}
                 >
@@ -220,11 +220,6 @@ const Contact = () => {
             <p className='text-center mt-6 text-[14px]'>Or email me directly at <span className='text-ternaryColor font-medium'>mdshahdat2504@gmail.com</span></p>
           </div>
         </div>
-      </div>
-      <div className="h-px bg-neutral-300 dark:bg-white/5" />
-      <div className='bg-primaryColor/5 text-center py-8'>
-        <p className='text-[15px]'>© 2026 Md Shahdat Hossain. All rights reserved.</p>
-        <p className='mt-2'>Designed & Developed with ❤️ by Shahdat Hossain</p>
       </div>
     </div>
   );

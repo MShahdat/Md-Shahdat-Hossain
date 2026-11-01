@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BiSolidSchool } from "react-icons/bi";
 import { IoSchoolSharp, IoSchool } from "react-icons/io5";
 import { jsSvg, nextSvg, nodeSvg, postgresqlSvg, prismaSvg, reactSvg, tsSvg } from '../utility/svg';
-import { FaLocationDot,  } from "react-icons/fa6";
+import { FaLocationDot, } from "react-icons/fa6";
 import EduCard from '../utility/eduCard';
 import { cerData, eduData } from '../data/data';
 import Heading from '../utility/Heading';
@@ -11,10 +11,10 @@ import Heading from '../utility/Heading';
 const Education = () => {
   const [show, setShow] = useState('edu')
   const activeBtn =
-  "bg-ternaryColor text-white shadow-md shadow-primaryColor/40 scale-105";
+    "bg-linear-to-bl from-secondaryColor to-primaryColor text-white scale-105";
 
-const inactiveBtn =
-  "bg-white/5 text-ternaryColor";
+  const inactiveBtn =
+    "bg-white/15 dar text-ternaryColor";
 
   return (
     <div id='education' className='bg-white dark:bg-background text-black dark:text-white'>
@@ -63,10 +63,10 @@ const inactiveBtn =
                         />
                       </svg>
                     </div>
-                    
+
                     <div className={`${idx % 2 == 0 ? 'timeline-start mb-10 md:text-end' : 'timeline-end md:mb-10'}`}>
                       <time className="font-mono italic font-bold text-primaryColor text-lg">{item.year}</time>
-                      <EduCard data = {item}/>
+                      <EduCard data={item} />
                     </div>
                     <hr />
                   </li>
@@ -96,7 +96,7 @@ const inactiveBtn =
                     </div>
                     <div className={`${idx % 2 === 0 ? 'timeline-start mb-10 md:text-end' : 'mb-10 md:text-end'}`}>
                       <time className="font-mono italic text-lg text-primaryColor font-bold">{item.year}</time>
-                      <EduCard data = {item}/>
+                      <EduCard data={item} />
                     </div>
                     <hr />
                   </li>

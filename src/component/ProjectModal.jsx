@@ -33,7 +33,7 @@ const ProjectModal = () => {
       <div className="relative w-[95vw] sm:w-[90vw] lg:w-[80vw] h-auto lg:h-[85vh] max-h-[85vh] rounded-lg border border-white/10 bg-white dark:bg-primaryColor/15 flex flex-col overflow-hidden">
         <button
           onClick={() => setOpenProjectModal(!openProjectModal)}
-          className='absolute right-2 top-2 rounded-full bg-white/90 active:bg-white/70 p-2 z-50'
+          className='absolute right-2 top-2 rounded-full bg-white/90 active:bg-white/70 p-1.5 z-50'
         >
           <RxCross2 className='text-xl text-red-600' />
         </button>
@@ -54,7 +54,7 @@ const ProjectModal = () => {
                   href={info?.live}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex items-center justify-center gap-2 border border-ternaryColor/20 px-4 w-full py-2.5 rounded-lg dark:bg-ternaryColor/15 bg-ternaryColor'
+                  className='flex items-center justify-center gap-2 border border-ternaryColor/20 px-4 w-full py-2.5 rounded-lg dark:bg-ternaryColor/15 bg-linear-to-bl from-primaryColor to-secondaryColor'
                 >
                   <FaExternalLinkAlt />
                   <p className='font-semibold'>Live Demo</p>
@@ -75,7 +75,7 @@ const ProjectModal = () => {
                   info.meta.map((me, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center justify-between py-3 text-sm"
+                      className="flex items-center justify-between gap-6 py-3 text-sm"
                     >
                       <span className="flex items-center gap-2 dark:text-neutral-400 text-neutral-700">
                         <span className="w-6 h-6 rounded-md bg-ternaryColor/10 flex items-center justify-center">

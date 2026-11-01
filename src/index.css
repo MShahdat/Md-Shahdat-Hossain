@@ -6,36 +6,60 @@
 
 @theme {
 
-  --color-primaryColor: #3b82f6;
+  /* --color-primaryColor: #3b82f6;
   --color-secondaryColor: #8b5cf6;
-  --color-ternaryColor: #10b981;
+  --color-ternaryColor: #10b981; */
+  --color-primaryColor: #6E16FE;
+  --color-secondaryColor: #DF11D5;
+  --color-ternaryColor: #6E16FE;
   --color-background: #030014;
 
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
-.float-1 { animation: float 3s ease-in-out infinite; }
-.float-2 { animation: float 3s ease-in-out infinite 0.5s; }
-.float-3 { animation: float 3s ease-in-out infinite 1s; }
-.float-4 { animation: float 3s ease-in-out infinite 1.5s; }
+.float-1 {
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-2 {
+  animation: float 3s ease-in-out infinite 0.5s;
+}
+
+.float-3 {
+  animation: float 3s ease-in-out infinite 1s;
+}
+
+.float-4 {
+  animation: float 3s ease-in-out infinite 1.5s;
+}
 
 
 
 /* Hide scrollbar but keep scrolling */
 .hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import resume from '/Md-Shahdat-Hossain-resume.pdf'
+import resume from '/Md-Shahdat-Hossain-resume.pdf';
 import { FaDownload, FaRocket } from "react-icons/fa6";
 import { IoLogoReact } from "react-icons/io5";
 import { jsSvg, nextSvg, nodeSvg, postgresqlSvg, prismaSvg, reactSvg, tsSvg } from '../utility/svg';
@@ -31,8 +31,9 @@ const link = [
 ]
 
 const expert = [
-  'Full-Stack Developer',
-  'React & Node.js Expert',
+  'Backend API Specialist',
+  'React & Next.js Developer',
+  'JWT Auth & RBAC Expert',
   'Problem Solver',
   'AI/ML Enthusiast',
 ];
@@ -69,14 +70,14 @@ const Hero = () => {
       <div className='max-w-7xl px-4 py-4 mx-auto'>
         <div className='grid grid-cols-1 bg-primaryColor/0 lg:grid-cols-2 space-y-8 space-x-4'>
           <div className=' bg-red-00 flex flex-col gap-3 items-start lg:py-8'>
-            <div className='flex flex-row items-center gap-2 px-2 py-0.5 md:px-6 md:py-1 tracking-normal border border-primaryColor/50 bg-ternaryColor rounded-full'>
+            <div className='flex flex-row items-center gap-2 px-2 py-0.5 md:px-6  tracking-normal border border-primaryColor/50 bg-ternaryColor rounded-full'>
               <p>👋</p>
               <p className='text-white font-semibold text-[13px] md:text-[14px] uppercase whitespace-pre tracking-wide'>Available for work</p>
             </div>
             <h3 className='text-[16px] lg:text-[18px] tracking-wider'>Hello, I'm
               <span className='text-[16px]  lg:text-[20px] font-bold text-ternaryColor'> Md. Shahdat Hossain</span>
             </h3>
-            <p className='text-4xl lg:text-6xl font-bold leading-tight font-["Syne"]'>
+            <p className='text-4xl lg:text-5xl font-bold leading-tight font-["Syne"]'>
               <p>Full-Stack</p>
               <p className='-mt-2 bg-linear-to-r from-ternaryColor to-secondaryColor bg-clip-text text-transparent'>Web Developer</p>
             </p>
@@ -84,15 +85,16 @@ const Hero = () => {
               {text}
               <span className='animate-pulse'>|</span>
             </p>
-            <p className='mt-2 lg:mt-4 text-[16px] text-neutral-700 dark:text-neutral-400 lg:text-[17px] leading-relaxed tracking-wider font-mono'>Develop reusable component-based code, design a clean and scalable architecture, robust API development, JWT based secure authentication & authorization and high-performance web application</p>
+            <p className='mt-1 text-[15px] lg:text-[16px] text-neutral-700 dark:text-neutral-400 leading-relaxed tracking-wide max-w-xl'>I build production-grade REST APIs and full-stack apps with Node.js, TypeScript, Prisma and PostgreSQL — secure JWT auth, role-based access, Redis caching and secure payments, with clean React and Next.js frontends.</p>
             <div className='mt-4 flex flex-col md:flex-row gap-4 '>
-              <a href='#contact' className='flex items-center gap-2 text-center text-[16px] font-medium bg-ternaryColor text-white px-6 py-2 md:py-2.5 rounded-lg shadow-2xl shadow-primaryColor hover:scale-101'>
+              <a href='#contact' className='flex items-center gap-2 text-center text-[16px] font-medium bg-linear-to-bl from-primaryColor to-secondaryColor
+ text-white px-6 py-2 rounded-lg hover:scale-101'>
                 <FaRocket />
                 <p>Get in Touch</p>
               </a>
               <button onClick={() => {
                 window.open(resume, '_blank', 'noopener, noreferrer');
-              }} className='flex gap-2 items-center text-[16px] font-medium hover:bg-ternaryColor transform ease-in-out transition-colors duration-300 hover:text-white px-6 py-2 md:py-2.5 rounded-lg bg-white text-ternaryColor border shadow-2xl hover:scale-101  hover:shadow-primaryColor'>
+              }} className='flex gap-2 items-center text-[16px] font-medium hover:bg-ternaryColor transform ease-in-out transition-colors duration-300 hover:text-white px-6 py-2 rounded-lg bg-white text-ternaryColor border shadow-2xl hover:scale-101  hover:shadow-primaryColor'>
                 <FaDownload />
                 <p>Download Resume</p>
               </button>
@@ -100,7 +102,7 @@ const Hero = () => {
             <div className='mt-4 flex gap-4'>
               {
                 link.map((li, idx) => (
-                  <a href={li.to} target='_blank' key={idx} className='flex flex-col items-center justify-center size-10 rounded-full text-white border border-primaryColor/50 bg-ternaryColor ring-0 ring-primaryColor hover:ring-2 hover:scale-102 transform ease-in-out duration-300'>
+                  <a href={li.to} target='_blank' key={idx} className='flex flex-col items-center justify-center size-10 rounded-full text-white border border-primaryColor/50 bg-primaryColor ring-0 ring-primaryColor hover:ring-2 hover:scale-102 transform ease-in-out duration-300'>
                     <span>{li.icon}</span>
                   </a>
                 ))
@@ -110,22 +112,22 @@ const Hero = () => {
           <div className='relative bg-green-00 flex flex-col items-center w-full justify-center bg-red-00'>
 
             {/* badge */}
-            <div className='opacity-0 md:opacity-100 float-1 absolute top-8 lg:top-30 right-36 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
+            <div className='opacity-0 md:opacity-100 float-1 absolute top-8 lg:top-16 right-2 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
               <span className='size-4 flex items-center justify-center'>{reactSvg}</span>
-              <p>React.js</p>
+              <p className=''>React.js</p>
             </div>
 
-            <div className='opacity-0 md:opacity-100 float-2 absolute top-8 lg:top-15 left-10 lg:-left-30 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
+            <div className='opacity-0 md:opacity-100 float-2 absolute top-8 lg:top-15 left-6 lg:-left-30 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
               <span className='size-4 flex items-center justify-center'>{nodeSvg}</span>
-              <p>Node.js</p>
+              <p className=''>Node.js</p>
             </div>
 
-            <div className='opacity-0 md:opacity-100 float-3 absolute bottom-25 right-20 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
+            <div className='opacity-0 md:opacity-100 float-3 absolute bottom-8 right-2 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
               <span className='size-4 flex items-center justify-center'>{tsSvg}</span>
               <p>TypeScript</p>
             </div>
 
-            <div className='opacity-0 md:opacity-100 float-4 absolute bottom-8 lg:bottom-35 left-10 lg:-left-20 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
+            <div className='opacity-0 md:opacity-100 float-4 absolute bottom-8 lg:bottom-16 left-6 lg:-left-20 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
               <span className='size-4 flex items-center justify-center'>{prismaSvg}</span>
               <p>Prisma</p>
             </div>

@@ -34,11 +34,11 @@ const About = () => {
             <div className=' w-4/5 sm:w-3/5 md:w-full lg:w-4/5 mx-auto'>
               <div className='absolute inset-0 bg-linear-to-r from-ternaryColor/0 via-primaryColor/0 to-secondaryColor/0 rounded-2xl blur-2xl opacity-20'></div>
 
-             <Hover3D>
-               <div className='relative border border-primaryColor/30 rounded-2xl overflow-hidden shadow-2xl shadow-primaryColor/60 dark:shadow hover:shadow-primaryColor/60 transform transition-all duration-300 hover:scale-[1.02]'>
-                <img src={me} className='w-full h-[340px] sm:h-[480px] md:h-[520px] object-cover' />
-              </div>
-             </Hover3D>
+              <Hover3D>
+                <div className='relative border border-primaryColor/30 rounded-2xl overflow-hidden shadow-lg shadow-primaryColor/60 dark:shadow hover:shadow-primaryColor/60 transform transition-all duration-300 hover:scale-[1.02]'>
+                  <img src={me} className='w-full h-[340px] sm:h-[480px] md:h-[520px] object-cover' />
+                </div>
+              </Hover3D>
             </div>
           </div>
           <div className=' order-2 md:order-2 border-primaryColor/20 px-2 py-0 pb-4 bg-white/0 rounded-lg shadow-sm transform ease-in-out duration-300 hover:border-primaryColor/60'>
@@ -61,11 +61,11 @@ const About = () => {
                   onClick={() => {
                     window.open(cv, '_blank', 'noopener, noreferrer');
                   }}
-                  className='w-fit flex gap-2 items-center text-[16px] font-medium hover:bg-ternaryColor transform ease-in-out transition-colors duration-300 hover:text-white px-6 py-2 md:py-2.5 rounded-lg bg-white text-ternaryColor border shadow-2xl hover:scale-101  hover:shadow-primaryColor'>
+                  className='w-fit flex gap-2 items-center text-[16px] font-medium hover:bg-ternaryColor transform ease-in-out transition-colors duration-300 hover:text-white px-6 py-2 rounded-lg bg-white text-ternaryColor border hover:scale-101  hover:shadow-primaryColor'>
                   <FaDownload />
                   <p>Download CV</p>
                 </button>
-                <a href='#contact' className='w-fit flex items-center gap-2 text-center text-[16px] font-medium bg-ternaryColor text-white px-6 py-2 md:py-2.5 rounded-lg shadow-2xl shadow-primaryColor hover:scale-101'>
+                <a href='#contact' className='w-fit flex items-center gap-2 text-center text-[16px] font-medium bg-linear-to-bl from-primaryColor to-secondaryColor text-white px-6 py-2 rounded-lg hover:scale-101'>
                   <FaRocket />
                   <p>Get in Touch</p>
                 </a>

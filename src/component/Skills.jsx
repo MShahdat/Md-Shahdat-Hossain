@@ -2,7 +2,7 @@
 import { FaCode } from "react-icons/fa";
 import React, { useEffect, useRef, useState } from 'react';
 import { SiLatex, SiNetlify, } from "react-icons/si";
-import { cppSvg, daisyUiSvg, figmaSvg, firebaseSvg, githubSvg, gitSvg, javaSvg, pythonSvg, vercelSvg } from "../utility/svg";
+import { biomeSvg, cloudinarySvg, cppSvg, daisyUiSvg, figmaSvg, firebaseSvg, githubSvg, gitSvg, javaSvg, nodeMailerSvg, passportSvg, pythonSvg, redisSvg, shahdcnSvg, vercelSvg } from "../utility/svg";
 import { skillCategories } from "../data/data";
 import Heading from "../utility/Heading";
 
@@ -14,7 +14,13 @@ const tools = [
   { icon: javaSvg, to: 'Java' },
   { icon: gitSvg, to: 'Git' },
   { icon: githubSvg, to: 'Github' },
+  { icon: passportSvg, to: 'Passport.js' },
+  { icon: redisSvg, to: 'Redis Caching' },
+  { icon: cloudinarySvg, to: 'Cloudinary' },
+  { icon: nodeMailerSvg, to: 'Nodemailer' },
+  { icon: biomeSvg, to: 'Biome.js' },
   { icon: figmaSvg, to: 'Figma' },
+  { icon: shahdcnSvg, to: 'Shahdcn UI' },
   { icon: daisyUiSvg, to: 'Daisy UI' },
   { icon: firebaseSvg, to: 'Firebase' },
   { icon: <SiLatex />, to: 'LaTeX' },

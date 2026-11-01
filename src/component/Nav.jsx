@@ -10,24 +10,23 @@ import { IoSchool, IoColorPalette } from "react-icons/io5";
 import { FiSun } from "react-icons/fi";
 import { RiComputerLine } from "react-icons/ri";
 import { SiOpenapiinitiative } from "react-icons/si";
-import resume from '/Md-Shahdat-Hossain-resume.pdf'
 import { dataContext } from '../context/Context';
 
 
 
 
 const Nav = () => {
-  const [,,,,open, setOpen, scrolled, setScrolled, activeSection, setActiveSection] = useContext(dataContext)
+  const [, , , , open, setOpen, scrolled, setScrolled, activeSection, setActiveSection] = useContext(dataContext)
 
   const [theme, setTheme] = useState(
     localStorage.getItem('theme') || 'dark'
   )
 
   useEffect(() => {
-    if(theme === 'dark'){
+    if (theme === 'dark') {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark')
-    }else{
+    } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light')
     }
@@ -104,11 +103,6 @@ const Nav = () => {
       <nav className='max-w-7xl mx-auto px-4 pt-4 pb-4'>
         <div className=' flex items-center justify-between border border-primaryColor/40 py-2 px-4 md:px-8 rounded-full bg-black/10 backdrop-blur-xl'>
           <div className='flex items-center gap-4'>
-            <div onClick={() => {
-              setOpen(!open)
-            }} className={`block md:hidden text-primaryColor/80 border border-primaryColor/70 rounded-md px-1 py-0.5`}>
-              {open ? <RxCross2 className='size-6 md:size-8' /> : <IoMdMenu className='size-6 md:size-8' />}
-            </div>
             <a href='#home' className='text-xl text-primaryColor sm:text-xl lg:text-2xl font-bold uppercase'>
               <div className='flex gap-1 items-center'>
                 <h3 className='tracking-wide flex flex-col leading-tight bg-linear-to-b from-ternaryColor to-primaryColor bg-clip-text text-transparent text-[14px] lg:text-[15px]'>Shahdat <span className='text-[10px] sm:text-[12px] px-1'>Hossain</span></h3>
@@ -131,15 +125,16 @@ const Nav = () => {
             })}
 
           </div>
-          <button onClick={() => handleTheme() } className=' flex items-center gap-2'>
-            {theme === 'light' ? <FiSun className='size-4'/> : <FaMoon className='size-4'/>}
-          </button>
-          {/* <button onClick={() => {
-            window.open(resume, '_blank', 'noopener, noreferrer');
-          }} className='flex items-center gap-1.5 bg-ternaryColor/20 border border-primaryColor/30 px-3 py-1 rounded-full text-[16px] font-semibold shadow-2xl shadow-ternaryColor'>
-            <SiOpenapiinitiative />
-            <p >init-resume</p>
-          </button> */}
+          <div className='flex items-center gap-4'>
+            <button onClick={() => handleTheme()} className=' flex items-center gap-2'>
+              {theme === 'light' ? <FiSun className='size-4' /> : <FaMoon className='size-4' />}
+            </button>
+            <div onClick={() => {
+              setOpen(!open)
+            }} className={`block md:hidden text-primaryColor/80 border border-primaryColor/70 rounded-md px-1 py-0.5`}>
+              {open ? <RxCross2 className='size-6 md:size-8' /> : <IoMdMenu className='size-6 md:size-8' />}
+            </div>
+          </div>
         </div>
       </nav>
 

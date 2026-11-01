@@ -10,6 +10,7 @@ import ScrollToTop from './scroll/ScrollTop';
 import Services from './component/Services';
 import Education from './component/Education'
 import ProjectModal from './component/ProjectModal';
+import Footer from './component/Footer';
 import { dataContext } from './context/Context';
 
 
@@ -17,10 +18,10 @@ const App = () => {
   const [openProjectModal] = useContext(dataContext);
 
   return (
-    <div className=''>
+    <Provider>
       <Nav />
       <Hero />
-       <div className="h-px bg-neutral-300 dark:bg-white/5" />
+      <div className="h-px bg-neutral-300 dark:bg-white/5" />
       <About />
       <div className="h-px bg-neutral-300 dark:bg-white/5" />
       <Skill />
@@ -33,10 +34,10 @@ const App = () => {
       <div className="h-px bg-neutral-300 dark:bg-white/5" />
       <Services />
       <div className="h-px bg-neutral-300 dark:bg-white/5" />
-      <Education/>
+      <Education />
       <div className="h-px bg-neutral-300 dark:bg-white/5" />
       <Contact />
-      <div className="h-px bg-neutral-300 dark:bg-white/5" />
+      <Footer />
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -51,7 +52,7 @@ const App = () => {
         transition={Zoom}
       />
       <ScrollToTop />
-    </div>
+    </Provider>
   );
 };
 

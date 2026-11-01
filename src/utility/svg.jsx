@@ -199,3 +199,89 @@ export const vercelSvg = (
     <path fill="currentColor" d="M12 2L2 20h20L12 2z" />
   </svg>
 );
+
+export const redisSvg = (
+  <svg xmlns="http://w3.org" viewBox="0 0 256 224" width="100%" height="100%">
+    <g id="top-layer">
+      <polygon points="128,0 228,44 128,88 28,44" fill="#A41F12" />
+      <polygon points="128,4 219,44 128,84 37,44" fill="#D82C20" />
+      <polygon points="28,44 128,88 128,124 28,80" fill="#A41F12" />
+      <polygon points="128,88 228,44 228,80 128,124" fill="#7E140A" />
+    </g>
+
+
+    <g id="middle-layer" transform="translate(0, 50)">
+      <polygon points="128,0 228,44 128,88 28,44" fill="#A41F12" />
+      <polygon points="128,4 219,44 128,84 37,44" fill="#D82C20" />
+      <polygon points="28,44 128,88 128,124 28,80" fill="#A41F12" />
+      <polygon points="128,88 228,44 228,80 128,124" fill="#7E140A" />
+    </g>
+
+
+    <g id="bottom-layer" transform="translate(0, 100)">
+      <polygon points="128,0 228,44 128,88 28,44" fill="#A41F12" />
+      <polygon points="128,4 219,44 128,84 37,44" fill="#D82C20" />
+      <polygon points="28,44 128,88 128,124 28,80" fill="#A41F12" />
+      <polygon points="128,88 228,44 228,80 128,124" fill="#7E140A" />
+    </g>
+
+
+    <polygon points="48,74 128,109 208,74 128,94" fill="#500700" opacity="0.4" />
+    <polygon points="48,124 128,159 208,124 128,144" fill="#500700" opacity="0.4" />
+  </svg>
+)
+
+
+export const shahdcnSvg = (
+  <svg xmlns="http://w3.org" viewBox="0 0 256 256" width="100%" height="100%">
+
+    <rect width="256" height="256" fill="#09090b" rx="52" />
+
+    <g transform="translate(38, 55)" stroke="#ffffff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <line x1="0" y1="146" x2="146" y2="0" />
+      <path d="M 60,146 L 180,146 L 180,26" />
+    </g>
+  </svg>
+)
+
+
+
+export const passportSvg = (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+    <path d="M64 12C36.8 12 18 20.8 18 48c0 36.8 30.4 60 46 68 15.6-8 46-31.2 46-68 0-27.2-18.8-36-46-36z" fill="#34495e" />
+
+    <circle cx="64" cy="54" r="28" fill="#e74c3c" />
+
+    <circle cx="64" cy="54" r="18" fill="#ffffff" />
+
+    <circle cx="64" cy="54" r="10" fill="#e74c3c" />
+
+    <rect x="36" y="90" width="56" height="4" rx="2" fill="#ffffff" opacity="0.3" />
+  </svg>
+)
+
+
+
+export const cloudinarySvg = (
+  <svg xmlns="http://w3.org" viewBox="0 0 256 168" width="100%" height="100%">
+    <path d="M192.4 60.5C187 26.1 157.1 0 121.2 0c-26.6 0-49.8 14.3-62.4 35.8-5.3-2.1-11.1-3.3-17.2-3.3C18.6 32.5 0 51.1 0 74.1c0 23 18.6 41.6 41.6 41.6h150.8c35.1 0 63.6-28.5 63.6-63.6 0-31.5-22.9-57.7-53.6-62.6" fill="#3448C5" />
+    <path d="M121.2 39c18.5 0 33.7 13.7 36 31.6l2 15.6 15.7 1.3c15.1 1.2 26.9 13.9 26.9 29.1 0 16.1-13.1 29.2-29.2 29.2H41.6C27.5 145.8 16 134.3 16 120.2s11.5-25.6 25.6-25.6c4.6 0 9 .1 12.3 2.5l11.7 8.3 4.1-13.7c4.6-15.3 18.7-25.9 34.7-25.9 2.5 0 5 .3 7.5.8l15.3 3.3-1.8-15.4c-1.3-10.3 6.1-19.5 16.4-20.8 1.4-.2 2.9-.3 4.4-.3" fill="#FFFFFF" />
+    <path d="M102.5 98.6c0-5.7 4.6-10.3 10.3-10.3h16.5c5.7 0 10.3 4.6 10.3 10.3v16.5c0 5.7-4.6 10.3-10.3 10.3h-16.5c-5.7 0-10.3-4.6-10.3-10.3z" fill="#F44236" />
+  </svg>
+)
+
+
+
+export const nodeMailerSvg = (
+  <svg xmlns="http://w3.org" viewBox="0 0 256 220" width="100%" height="100%">
+    <path d="M0 24.57v170.86h256V24.57H0zm218.42 20H128L37.58 44.57 128 118.44l90.42-73.87zM20 63.66l52.61 43.14L20 156.45V63.66zm17.58 110.91l55.12-54.74 27.67 22.69c4.43 3.63 10.83 3.63 15.26 0l27.67-22.69 55.12 54.74H37.58zm198.42-18.12l-52.61-49.65 52.61-43.14v92.79z" fill="#22B14C" />
+  </svg>
+)
+
+
+
+export const biomeSvg = (
+  <svg xmlns="http://w3.org" viewBox="0 0 256 256" width="100%" height="100%">
+    <path d="M128 0C57.305 0 0 57.305 0 128s57.305 128 128 128 128-57.305 128-128S198.695 0 128 0zm61.34 163.633c-14.73 17.512-36.85 28.367-61.34 28.367-44.183 0-80-35.817-80-80s35.817-80 80-80c24.49 0 46.61 10.855 61.34 28.367L152 89.234C145.473 83.562 137.13 80 128 80c-17.673 0-32 14.327-32 32s14.327 32 32 32c9.13 0 17.473-3.562 24-9.234l37.34 28.867z" fill="#33A6FF" />
+  </svg>
+)
