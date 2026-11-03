@@ -28,6 +28,8 @@ const ProjectModal = () => {
 
   const info = selectedProject;
 
+  // console.log('selected project', info)
+
   return (
     <div className='flex items-center justify-center bg-black h-screen fixed inset-0 z-40 p-4 sm:p-6'>
       <div className="relative w-[95vw] sm:w-[90vw] lg:w-[80vw] h-auto lg:h-[85vh] max-h-[85vh] rounded-lg border border-white/10 bg-white dark:bg-primaryColor/15 flex flex-col overflow-hidden">
@@ -51,19 +53,19 @@ const ProjectModal = () => {
 
               <div className='mt-1 flex items-center gap-4 sm:gap-4 xl:gap-12 justify-between shrink-0 dark:text-white'>
                 <a
-                  href={info?.live}
+                  href={info?.liveUrl ?? ""}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex items-center justify-center gap-2 border border-ternaryColor/20 px-4 w-full py-2.5 rounded-lg dark:bg-ternaryColor/15 bg-linear-to-bl from-primaryColor to-secondaryColor'
+                  className='flex items-center justify-center gap-2 border border-ternaryColor/20 px-4 w-full py-1.5 rounded-lg dark:bg-ternaryColor/15 bg-linear-to-bl from-primaryColor to-secondaryColor'
                 >
                   <FaExternalLinkAlt />
                   <p className='font-semibold'>Live Demo</p>
                 </a>
                 <a
-                  href={info?.github}
+                  href={info?.githubUrl ?? ""}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex items-center justify-center gap-2 border border-ternaryColor/20 px-4 w-full py-2.5 rounded-lg dark:bg-ternaryColor/15 bg-ternaryColor'
+                  className='flex items-center justify-center gap-2 border border-ternaryColor/20 px-4 w-full py-1.5 rounded-lg dark:bg-ternaryColor/15 bg-ternaryColor'
                 >
                   <FaGithub />
                   <p className='font-semibold'>GitHub</p>
@@ -71,20 +73,20 @@ const ProjectModal = () => {
               </div>
 
               <div className="mt-4 px-4 divide-y divide-ternaryColor/10 border-t border-ternaryColor/10">
-                {info.meta &&
-                  info.meta.map((me, idx) => (
+                {info?.meta &&
+                  info?.meta.map((me) => (
                     <div
-                      key={idx}
+                      key={me.level}
                       className="flex items-center justify-between gap-6 py-3 text-sm"
                     >
                       <span className="flex items-center gap-2 dark:text-neutral-400 text-neutral-700">
                         <span className="w-6 h-6 rounded-md bg-ternaryColor/10 flex items-center justify-center">
                           <TbListDetails className="text-ternaryColor" />
                         </span>
-                        {me.label}
+                        {me?.level ?? "-"}
                       </span>
                       <span className="dark:text-neutral-200 text-neutral-700 font-medium">
-                        {me.value}
+                        {me?.value ?? "-"}
                       </span>
                     </div>
                   ))}
@@ -97,18 +99,18 @@ const ProjectModal = () => {
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <div className="shrink-0 w-fit text-xs font-medium text-ternaryColor border border-ternaryColor/40 bg-ternaryColor/10 rounded-full px-3 py-1.5 whitespace-nowrap">
-                      {info?.category} Project
+                      {info?.category?.title ?? ""} Project
                     </div>
                     <h1 className="mt-4 text-2xl md:text-3xl font-bold text-ternaryColor">
-                      {info?.title}
+                      {info?.title ?? "-"}
                     </h1>
                     <p className="text-lg md:text-lg font-semibold dark:text-white text-neutral-700 mt-1">
-                      {info?.subtitle}
+                      {info?.subtitle ?? "-"}
                     </p>
                   </div>
                 </div>
                 <p className="mt-3 dark:text-neutral-400 text-neutral-700 text-[15px] tracking-wide leading-relaxed">
-                  {info?.description}
+                  {info?.description ?? "-"}
                 </p>
               </div>
 
@@ -132,16 +134,16 @@ const ProjectModal = () => {
               }
 
               {
-                info.features &&
+                info.feature &&
                 <div className='mt-4'>
                   <div className='flex items-center gap-2 text-ternaryColor dark:text-white text-2xl'>
                     <BsFillRocketTakeoffFill />
                     <p className='font-semibold'>Key Features</p>
                   </div>
                   <div className="mt-4 grid sm:grid-cols-2 gap-3">
-                    {info.features.map((feature) => (
+                    {info.feature.map((fea) => (
                       <div
-                        key={feature}
+                        key={fea}
                         className="flex items-start gap-2"
                       >
                         <TbListDetails
@@ -149,7 +151,7 @@ const ProjectModal = () => {
                           size={15}
                         />
                         <span className="text-sm lg:text-[16px] dark:text-neutral-300 text-neutral-700 leading-6">
-                          {feature}
+                          {fea}
                         </span>
                       </div>
                     ))}
@@ -157,38 +159,36 @@ const ProjectModal = () => {
                 </div>
               }
 
-
-
               {
                 info.stats &&
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-4 border-t border-neutral-800">
                   {info.stats.map((item) => (
                     <div
-                      key={item.label}
+                      key={item?.lavel}
                       className="rounded-lg dark:bg-ternaryColor/5 bg-ternaryColor/10 py-5 text-center"
                     >
                       <h2 className="text-xl md:text-2xl font-bold text-ternaryColor">
-                        {item.value}
+                        {item?.value ?? "-"}
                       </h2>
 
                       <p className="text-sm dark:text-neutral-400 text-neutral-700 mt-1">
-                        {item.label}
+                        {item?.level ?? "-"}
                       </p>
                     </div>
                   ))}
                 </div>
               }
               {
-                info.future &&
+                info?.futureImporve &&
                 <div className='mt-4'>
                   <div className='flex items-center gap-2 text-ternaryColor dark:text-white text-2xl'>
                     <FaExternalLinkAlt />
                     <p className='font-semibold'>Future Improvement</p>
                   </div>
                   <div className="mt-4 grid sm:grid-cols-2 gap-3">
-                    {info.future.map((feature) => (
+                    {info?.futureImporve.map((item) => (
                       <div
-                        key={feature}
+                        key={item}
                         className="flex items-start gap-2"
                       >
                         <AiOutlineCluster
@@ -196,7 +196,7 @@ const ProjectModal = () => {
                           size={15}
                         />
                         <span className="text-sm lg:text-[16px] dark:text-neutral-300 text-neutral-700 leading-6">
-                          {feature}
+                          {item}
                         </span>
                       </div>
                     ))}

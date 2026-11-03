@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
+
 import { FaCalendar } from "react-icons/fa6";
 import { BiSolidSchool } from "react-icons/bi";
-import { IoSchool } from "react-icons/io5";
-import { IoSchoolSharp } from "react-icons/io5";
-import { jsSvg, nextSvg, nodeSvg, postgresqlSvg, prismaSvg, reactSvg, tsSvg } from '../utility/svg';
 import { FaLocationDot } from "react-icons/fa6";
 
 
@@ -21,19 +18,19 @@ const eduCard = ({ data }) => {
             </div>
             <div>
               <h2 className="dark:text-white text-ternaryColor font-semibold text-lg leading-snug">
-                {data.degree}
+                {data.degree ?? "-"}
               </h2>
               <p className="dark:text-ternaryColor text-neutral-800 text-sm font-medium mt-1">
-                {data.institute}
+                {data.institute ?? "-"}
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-white/60">
                 <div className="flex items-center gap-2 text-ternaryColor font-medium dark:text-white">
                   <FaCalendar className="w-4 h-4" />
-                  <span>{data.date}</span>
+                  <span>{data.dateRange ?? "-"}</span>
                 </div>
                 <div className="flex items-center gap-2 font-medium dark:text-white text-ternaryColor">
                   <FaLocationDot className="w-4 h-4" />
-                  <span>{data.location}</span>
+                  <span>{data.location ?? "-"}</span>
                 </div>
               </div>
             </div>
@@ -44,11 +41,11 @@ const eduCard = ({ data }) => {
         <div className="h-px dark:bg-white/10 bg-primary/30 my-2" />
 
         <p className="dark:text-white/70 text-neutral-800 text-sm leading-relaxed mt-0">
-          {data.description}
+          {data.description ?? "-"}
         </p>
 
         <div className="flex flex-wrap gap-2 mt-4">
-          {data.tags.map((tec) => (
+          {data?.tags.map((tec) => (
             <div
               key={tec}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full dark:bg-ternaryColor/25 bg-ternaryColor border border-white/10 text-xs text-white font-medium"

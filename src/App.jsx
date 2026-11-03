@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import Nav from './component/Nav';
 import Hero from './component/Hero';
 import About from './component/About';
@@ -12,7 +12,7 @@ import Education from './component/Education'
 import ProjectModal from './component/ProjectModal';
 import Footer from './component/Footer';
 import { dataContext } from './context/Context';
-
+import Provider from './Provider';
 
 const App = () => {
   const [openProjectModal] = useContext(dataContext);

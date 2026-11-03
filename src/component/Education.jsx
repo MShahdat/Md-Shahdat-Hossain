@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
-import { BiSolidSchool } from "react-icons/bi";
-import { IoSchoolSharp, IoSchool } from "react-icons/io5";
-import { jsSvg, nextSvg, nodeSvg, postgresqlSvg, prismaSvg, reactSvg, tsSvg } from '../utility/svg';
-import { FaLocationDot, } from "react-icons/fa6";
+import { useState } from 'react';
+import { IoSchoolSharp } from "react-icons/io5";
 import EduCard from '../utility/eduCard';
-import { cerData, eduData } from '../data/data';
 import Heading from '../utility/Heading';
-
+import { useGetHeadingById, useGetEducations } from "../hook/index.hook"
 
 const Education = () => {
   const [show, setShow] = useState('edu')
+
+
+  const { data } = useGetHeadingById("5")
+  const { data: educationData } = useGetEducations()
+
+  const heading = data?.data ?? undefined
+  const edu = educationData?.data ?? []
+
+  const eduData = edu.filter((item) => item?.type === "EDUCATION")
+  const cerData = edu.filter((item) => item.type === "CERTIFICATION")
+
+  // console.log(edu)
+
+
   const activeBtn =
     "bg-linear-to-bl from-secondaryColor to-primaryColor text-white scale-105";
 
@@ -22,9 +32,9 @@ const Education = () => {
 
         <Heading
           icon={<IoSchoolSharp />}
-          title="Education"
-          subtitle="Education & Certificate"
-          description="A section of my most impactful technical and educational journey"
+          title={heading?.name ?? "-"}
+          subtitle={heading?.title ?? "-"}
+          description={heading?.description ?? "-"}
         />
 
         <div className='mt-12'>
@@ -47,7 +57,7 @@ const Education = () => {
             <ul className="mt-8 timeline timeline-snap-icon max-md:timeline-compact timeline-vertical ">
               {
                 eduData.map((item, idx) => (
-                  <li key={idx}>
+                  <li key={item.id}>
                     {idx !== 0 && <hr />}
                     <div className="timeline-middle">
                       <svg
@@ -65,7 +75,7 @@ const Education = () => {
                     </div>
 
                     <div className={`${idx % 2 == 0 ? 'timeline-start mb-10 md:text-end' : 'timeline-end md:mb-10'}`}>
-                      <time className="font-mono italic font-bold text-primaryColor text-lg">{item.year}</time>
+                      <time className="font-mono italic font-bold text-primaryColor text-lg">{item?.year ?? "-"}</time>
                       <EduCard data={item} />
                     </div>
                     <hr />
@@ -78,8 +88,8 @@ const Education = () => {
             show === 'cer' &&
             <ul className="mt-8 timeline timeline-snap-icon max-md:timeline-compact timeline-vertical ">
               {
-                cerData.map((item, idx) => (
-                  <li key={idx}>
+                cerData.map((item) => (
+                  <li key={item.id}>
                     <div className="timeline-middle">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +105,7 @@ const Education = () => {
                       </svg>
                     </div>
                     <div className={`${idx % 2 === 0 ? 'timeline-start mb-10 md:text-end' : 'mb-10 md:text-end'}`}>
-                      <time className="font-mono italic text-lg text-primaryColor font-bold">{item.year}</time>
+                      <time className="font-mono italic text-lg text-primaryColor font-bold">{item?.year ?? "-"}</time>
                       <EduCard data={item} />
                     </div>
                     <hr />
