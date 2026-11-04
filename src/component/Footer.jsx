@@ -2,6 +2,10 @@ import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail, MdLocationOn } from 'react-icons/md';
 import { FaDownload } from 'react-icons/fa6';
+import { useGetConfigById, useGetServices } from "../hook/index.hook"
+import ButtonLink from '../utility/btn.link';
+
+
 
 const quickLinks = [
   { path: '#about', label: 'About' },
@@ -11,16 +15,17 @@ const quickLinks = [
   { path: '#education', label: 'Education' }
 ];
 
-const services = [
-  { path: '#services', label: 'Full-Stack Development' },
-  { path: '#services', label: 'API Design & Development' },
-  { path: '#services', label: 'Database Design' },
-  { path: '#projects', label: 'Backend Systems' },
-  { path: '#projects', label: 'React Applications' },
-];
 
 const Footer = () => {
   const year = new Date().getFullYear();
+
+  const { data: configData } = useGetConfigById()
+  const { data: serviceData } = useGetServices()
+
+
+  const config = configData?.data ?? undefined
+  const resume = config?.resumeUrl ?? undefined
+  const services = serviceData?.data ?? []
 
   return (
     <footer className="bg-[#FAFAFB] dark:bg-[#060121] text-neutral-600 dark:text-neutral-400 transition-colors duration-300">
@@ -33,11 +38,11 @@ const Footer = () => {
           <div>
             <a href="#home" className="inline-block">
               <span className="text-[17px] font-bold uppercase tracking-wide bg-gradient-to-r from-ternaryColor to-primaryColor bg-clip-text text-transparent">
-                Md. Shahdat Hossain
+                {config?.name ?? "-"}
               </span>
             </a>
             <p className="mt-1 text-[14px] font-medium tracking-wide text-black dark:text-white">
-              Full-Stack Web Developer
+              {config?.role ?? "-"}
             </p>
             <p className="mt-3 text-[14px] leading-relaxed">
               Building scalable APIs and polished UIs with React, Node.js and
@@ -54,7 +59,7 @@ const Footer = () => {
             </p>
             <div className="mt-4 flex items-center gap-2.5">
               <a
-                href="https://www.linkedin.com/in/md-shahdat-hossain/"
+                href={config?.linkedin ?? ""}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -63,7 +68,7 @@ const Footer = () => {
                 <FaLinkedin className="size-4" />
               </a>
               <a
-                href="https://github.com/MShahdat"
+                href={config?.github ?? ""}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -72,7 +77,7 @@ const Footer = () => {
                 <FaGithub className="size-4" />
               </a>
               <a
-                href="mailto:mdshahdat2504@gmail.com"
+                href={`mailto:${config?.email ? config?.email : "mdshahdat2504@gmail.com"}`}
                 aria-label="Email"
                 className="inline-flex items-center justify-center size-9 rounded-lg border border-neutral-300 dark:border-white/15 text-neutral-600 dark:text-neutral-300 hover:text-primaryColor hover:border-primaryColor/60 transition-colors"
               >
@@ -107,12 +112,12 @@ const Footer = () => {
             </p>
             <ul className="mt-4 flex flex-col gap-2.5">
               {services.map((s) => (
-                <li key={s.label}>
+                <li key={s.id}>
                   <a
-                    href={s.path}
+                    href="#service"
                     className="text-[14px] font-medium hover:text-primaryColor transition-colors"
                   >
-                    {s.label}
+                    {s.title}
                   </a>
                 </li>
               ))}
@@ -124,18 +129,17 @@ const Footer = () => {
             <p className="text-[12px] font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-500">
               For Recruiters
             </p>
-            <p className="mt-4 text-[14px] leading-relaxed">
+            <p className="mt-4 pb-2 text-[14px] leading-relaxed">
               Hiring for full-time or freelance? Let&apos;s talk.
             </p>
-            <a
-              href="/Md-Shahdat-Hossain-resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-[14px] font-semibold text-white bg-gradient-to-r from-primaryColor to-secondaryColor px-5 py-2 rounded-lg hover:opacity-90 transition-opacity shadow-md shadow-primaryColor/25"
-            >
-              <FaDownload className="size-3.5" />
-              Download Resume
-            </a>
+
+            <ButtonLink
+              title={"Download Resume"}
+              url={resume}
+              target={"_blank"}
+              icon={<FaDownload />}
+              css={"bg-linear-to-bl from-primaryColor to-secondaryColor text-white w-fit"}
+            />
             <a
               href="mailto:mdshahdat2504@gmail.com"
               className="mt-3 block text-[14px] hover:text-primaryColor transition-colors"

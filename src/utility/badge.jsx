@@ -3,7 +3,7 @@
 const Badge = ({ icon, name }) => {
   return (
     <div
-      className='flex items-center gap-2 border border-primaryColor/50 text-primaryColor font-semibold bg-primaryColor/20 px-4 py-1 rounded-full leading-relaxed'
+      className='flex items-center gap-2 border border-primaryColor/50 text-primaryColor font-semibold bg-primaryColor/20 px-4 py-0.5 rounded-full leading-relaxed'
     >
       {icon && (
         <span

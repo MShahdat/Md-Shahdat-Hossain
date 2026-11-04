@@ -12,13 +12,15 @@ import Education from './component/Education'
 import ProjectModal from './component/ProjectModal';
 import Footer from './component/Footer';
 import { dataContext } from './context/Context';
-import Provider from './Provider';
+import Provider from "./provider/index"
+import Loading from './utility/Loading';
 
 const App = () => {
   const [openProjectModal] = useContext(dataContext);
 
   return (
     <Provider>
+      <Loading />
       <Nav />
       <Hero />
       <div className="h-px bg-neutral-300 dark:bg-white/5" />

@@ -1,11 +1,11 @@
 
 import { FaDownload, FaRocket } from "react-icons/fa6";
-import { expressSvg, jsSvg, nextSvg, nodeSvg, postgresqlSvg, prismaSvg, reactSvg, tsSvg } from '../utility/svg';
 import { GrUserManager } from "react-icons/gr";
 import Heading from '../utility/Heading';
 import { Hover3D } from '../utility/Hover3D';
 import { useGetConfigById, useGetHeadingById, useGetSkills } from '../hook/index.hook';
 import Badge from "../utility/badge";
+import ButtonLink from "../utility/btn.link";
 
 
 const About = () => {
@@ -39,8 +39,8 @@ const About = () => {
               <div className='absolute inset-0 bg-linear-to-r from-ternaryColor/0 via-primaryColor/0 to-secondaryColor/0 rounded-2xl blur-2xl opacity-20'></div>
 
               <Hover3D>
-                <div className='relative border border-primaryColor/30 rounded-2xl overflow-hidden shadow-lg shadow-primaryColor/60 dark:shadow hover:shadow-primaryColor/60 transform transition-all duration-300 hover:scale-[1.02]'>
-                  <img src={config?.image ?? ""} className='w-full h-[340px] sm:h-[480px] md:h-[520px] object-cover' />
+                <div className='relative border border-primaryColor/30 rounded-2xl overflow-hidden shadow-lg shadow-primaryColor/40 dark:shadow hover:shadow-primaryColor/50 transform transition-all duration-300 hover:scale-[1.02]'>
+                  <img src={config?.image ?? "df"} className='w-full h-[340px] sm:h-[480px] md:h-[520px] object-cover' />
                 </div>
               </Hover3D>
             </div>
@@ -58,20 +58,19 @@ const About = () => {
 
             <div >
               <div className='mt-8 flex flex-col sm:flex-row gap-4 '>
-                <a
-                  href={cv}
-                  aria-disabled={!cv}
-                  target='_blank'
-                  className={`w-fit flex gap-2 items-center text-[16px] font-medium hover:bg-ternaryColor transform ease-in-out transition-colors duration-300 hover:text-white px-6 py-1.5 rounded-lg bg-white text-ternaryColor border shadow-2xl hover:scale-101 hover:shadow-primaryColor ${!cv ? 'pointer-events-none opacity-50' : ''}`}
-                >
-                  <FaDownload />
-                  <p>Download CV</p>
-                </a>
-                <a href='#contact' className='w-fit flex items-center gap-2 text-center text-[16px] font-medium bg-linear-to-bl from-primaryColor to-secondaryColor text-white px-6 py-1.5 rounded-lg hover:scale-101'>
-                  <FaRocket />
-                  <p>Get in Touch</p>
-                </a>
-
+                <ButtonLink
+                  title={"Download CV"}
+                  url={cv}
+                  target={"_blank"}
+                  icon={<FaDownload />}
+                  css={"hover:bg-ternaryColor hover:text-white bg-white text-ternaryColor hover:shadow-primaryColor w-fit"}
+                />
+                <ButtonLink
+                  title={"Get in Touch"}
+                  url={"#contact"}
+                  icon={<FaRocket />}
+                  css={"bg-linear-to-bl from-primaryColor to-secondaryColor text-white w-fit"}
+                />
               </div>
             </div>
 

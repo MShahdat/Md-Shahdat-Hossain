@@ -3,6 +3,7 @@ import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter } from "react-
 import { FaDownload, FaRocket } from "react-icons/fa6";
 import { nodeSvg, prismaSvg, reactSvg, tsSvg } from '../utility/svg';
 import { useGetConfigById } from '../hook/index.hook';
+import ButtonLink from '../utility/btn.link';
 
 
 const Hero = () => {
@@ -63,6 +64,8 @@ const Hero = () => {
     },
   ]
 
+  const badgeCss = 'opacity-0 md:opacity-100 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'
+
   return (
     <div id='home' className='relative bg-white dark:bg-background text-black dark:text-white overflow-auto'>
       <div className='max-w-7xl px-4 py-4 mx-auto'>
@@ -77,7 +80,7 @@ const Hero = () => {
                 {config?.name ?? "Md. Shahdat Hossain"}</span>
             </h3>
             <p className='text-4xl lg:text-5xl font-bold leading-tight font-["Syne"]'>
-              <p>Full-Stack</p>
+              <span>Full-Stack</span><br />
               <span className='-mt-2 bg-linear-to-r from-ternaryColor to-secondaryColor bg-clip-text text-transparent'>Web Developer</span>
             </p>
             <p className='text-lg lg:text-2xl font-semibold text-ternaryColor'>
@@ -88,20 +91,20 @@ const Hero = () => {
               {config?.heroDescription ?? ""}
             </p>
             <div className='mt-4 flex flex-col sm:flex-row gap-4 '>
-              <a href='#contact' className='flex items-center gap-2 text-center text-[16px] font-medium bg-linear-to-bl from-primaryColor to-secondaryColor
- text-white px-6 py-1.5 rounded-lg hover:scale-101'>
-                <FaRocket />
-                <p>Get in Touch</p>
-              </a>
-              <a
-                href={resume}
-                aria-disabled={!resume}
-                target='_blank'
-                className={`flex gap-2 items-center text-[16px] font-medium hover:bg-ternaryColor transform ease-in-out transition-colors duration-300 hover:text-white px-6 py-1.5 rounded-lg bg-white text-ternaryColor border shadow-2xl hover:scale-101 hover:shadow-primaryColor ${!resume ? 'pointer-events-none opacity-50' : ''}`}
-              >
-                <FaDownload />
-                <p>Download Resume</p>
-              </a>
+              <ButtonLink
+                title={"Get in Touch"}
+                url={"#contact"}
+                icon={<FaRocket />}
+                css={"bg-linear-to-bl from-primaryColor to-secondaryColor text-white"}
+              />
+
+              <ButtonLink
+                title={"Download Resume"}
+                url={resume}
+                target={"_blank"}
+                icon={<FaDownload />}
+                css={"hover:bg-ternaryColor hover:text-white bg-white text-ternaryColor hover:shadow-primaryColor"}
+              />
             </div>
             <div className='mt-4 flex gap-4'>
               {
@@ -116,27 +119,27 @@ const Hero = () => {
           <div className='relative bg-green-00 flex flex-col items-center w-full justify-center bg-red-00'>
 
             {/* badge */}
-            <div className='opacity-0 md:opacity-100 float-1 absolute top-8 lg:top-16 right-2 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
+            <div className={`absolute top-12 lg:top-15 right-2 float-1 ${badgeCss}`}>
               <span className='size-4 flex items-center justify-center'>{reactSvg}</span>
               <p className=''>React.js</p>
             </div>
 
-            <div className='opacity-0 md:opacity-100 float-2 absolute top-8 lg:top-15 left-6 lg:-left-30 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
+            <div className={`float-2 absolute top-12 lg:top-15 left-6 lg:-left-30 ${badgeCss}`}>
               <span className='size-4 flex items-center justify-center'>{nodeSvg}</span>
               <p className=''>Node.js</p>
             </div>
 
-            <div className='opacity-0 md:opacity-100 float-3 absolute bottom-8 right-2 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
+            <div className={`float-3 absolute bottom-8 lg:bottom-16 right-2 ${badgeCss}`}>
               <span className='size-4 flex items-center justify-center'>{tsSvg}</span>
               <p>TypeScript</p>
             </div>
 
-            <div className='opacity-0 md:opacity-100 float-4 absolute bottom-8 lg:bottom-16 left-6 lg:-left-20 flex items-center gap-2 bg-primaryColor/20 border border-primaryColor/30 px-3 py-1.5 rounded-full text-sm font-semibold shadow-2xl shadow-ternaryColor'>
+            <div className={`float-4 absolute bottom-8 lg:bottom-16 left-6 lg:-left-20 ${badgeCss}`}>
               <span className='size-4 flex items-center justify-center'>{prismaSvg}</span>
               <p>Prisma</p>
             </div>
 
-            <div className='border border-primaryColor/40 w-full sm:w-5/6 md:w-8/12 lg:w-10/12 rounded-xl bg-black/90 shadow-2xl shadow-primaryColor/50 dark:shadow-primary/20 overflow-hidden font-mono text-sm'>
+            <div className='border border-primaryColor/40 w-full sm:w-5/6 md:w-8/12 lg:w-10/12 rounded-xl bg-black/90 shadow-2xl shadow-primaryColor/30 dark:shadow-primary/20 overflow-hidden font-mono text-sm'>
               {/* Window header */}
               <div className='flex items-center gap-2 px-4 py-2.5 border-b border-primaryColor/20'>
                 <div className='w-3 h-3 rounded-full bg-red-500'></div>

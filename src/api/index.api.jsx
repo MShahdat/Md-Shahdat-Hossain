@@ -38,6 +38,14 @@ export const getServices = () => {
 }
 
 
-export const getEduction = () => {
+export const getEducation = () => {
   return apiClient('/education')
+}
+
+
+export const createContact = (payload) => {
+  return apiClient('/contact', {
+    method: "POST",
+    body: payload
+  })
 }

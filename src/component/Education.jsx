@@ -39,12 +39,12 @@ const Education = () => {
 
         <div className='mt-12'>
           <div className='mt-4 flex items-center justify-center gap-4 '>
-            <button onClick={() => setShow('edu')} className={`w-fit flex items-center gap-2 border border-primaryColor/20 px-6 py-1.5 md:py-2 rounded-lg font-medium transition-all duration-300 ${show === "edu" ? activeBtn : inactiveBtn
+            <button onClick={() => setShow('edu')} className={`w-fit flex items-center gap-2 border border-primaryColor/20 px-6 py-1 lg:py-1.5 rounded-lg font-medium transition-all duration-300 ${show === "edu" ? activeBtn : inactiveBtn
               }`}>
               <IoSchoolSharp />
               <p>Education</p>
             </button>
-            <button onClick={() => setShow('cer')} className={`w-fit flex items-center gap-2 border border-primaryColor/20 px-6 py-1.5 md:py-2 rounded-lg font-medium transition-all duration-300 ${show === "cer" ? activeBtn : inactiveBtn
+            <button onClick={() => setShow('cer')} className={`w-fit flex items-center gap-2 border border-primaryColor/20 px-6 py-1 lg:py-1.5 rounded-lg font-medium transition-all duration-300 ${show === "cer" ? activeBtn : inactiveBtn
               }`}>
               <IoSchoolSharp />
               <p>Certificate</p>
@@ -88,8 +88,8 @@ const Education = () => {
             show === 'cer' &&
             <ul className="mt-8 timeline timeline-snap-icon max-md:timeline-compact timeline-vertical ">
               {
-                cerData.map((item) => (
-                  <li key={item.id}>
+                cerData.map((item, idx) => (
+                  <li key={idx}>
                     <div className="timeline-middle">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

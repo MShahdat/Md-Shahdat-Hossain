@@ -5,14 +5,10 @@ import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter, FaHome, FaMoo
 import { MdManageAccounts, MdContactPhone } from "react-icons/md";
 import { LuNotebookPen } from "react-icons/lu";
 import { GrProjects } from "react-icons/gr";
-import me from '/shahdat1.png';
-import { IoSchool, IoColorPalette } from "react-icons/io5";
+import { IoSchool } from "react-icons/io5";
 import { FiSun } from "react-icons/fi";
-import { RiComputerLine } from "react-icons/ri";
-import { SiOpenapiinitiative } from "react-icons/si";
 import { dataContext } from '../context/Context';
-
-
+import { useGetConfigById } from '../hook/index.hook';
 
 
 const Nav = () => {
@@ -21,6 +17,9 @@ const Nav = () => {
   const [theme, setTheme] = useState(
     localStorage.getItem('theme') || 'dark'
   )
+
+  const { data } = useGetConfigById()
+
 
   useEffect(() => {
     if (theme === 'dark') {
@@ -64,6 +63,8 @@ const Nav = () => {
   }, []);
 
 
+  const config = data?.data ?? undefined
+
   const navitem = [
     { path: '#home', link: 'Home', icon: <FaHome /> },
     { path: '#about', link: 'About', icon: <MdManageAccounts /> },
@@ -75,25 +76,25 @@ const Nav = () => {
 
   const link = [
     {
-      icon: <FaFacebook className='size-5' />,
-      to: 'https://www.facebook.com/md.shahdat.hossain.547522/',
+      icon: <FaGithub className='size-6' />,
+      to: `${config?.github ?? "https://github.com/MShahdat"}`,
     },
     {
-      icon: <FaTwitter className='size-5' />,
-      to: 'https://x.com/MdShahdat25',
+      icon: <FaLinkedin className='size-6 ' />,
+      to: `${config?.linkedin ?? "https://www.linkedin.com/in/md-shahdat-hossain/"}`,
     },
     {
-      icon: <FaInstagram className='size-5' />,
-      to: 'https://www.instagram.com/sahadathossain85/',
+      icon: <FaFacebook className='size-6' />,
+      to: `${config?.facebook ?? "https://www.facebook.com/md.shahdat.hossain.547522/"}`,
     },
     {
-      icon: <FaGithub className='size-5' />,
-      to: 'https://github.com/MShahdat',
+      icon: <FaTwitter className='size-6' />,
+      to: `${config?.twitter ?? "https://x.com/MdShahdat25"}`,
     },
     {
-      icon: <FaLinkedin className='size-5' />,
-      to: 'https://www.linkedin.com/in/md-shahdat-hossain/',
-    }
+      icon: <FaInstagram className='size-6' />,
+      to: `${config?.instagram ?? "https://www.instagram.com/sahadathossain85/"}`,
+    },
   ]
 
   // bg-[#060121]
@@ -144,8 +145,8 @@ const Nav = () => {
           <div className=' w-[320px] h-screen'>
             <div className='flex flex-col gap-8 py-8  px-10'>
               <div className='flex flex-col gap-3 items-start'>
-                <img src={me} className='h-32 w-32 rounded-full border-[6px] border-ternaryColor object-fill mx-auto'></img>
-                <h2 className='text-[24px] font-medium'>Md. Shahdat Hossain</h2>
+                <img src={config?.image ?? "sh"} className='h-32 w-32 rounded-full border-[6px] border-ternaryColor object-fill mx-auto'></img>
+                <h2 className='text-[24px] font-medium'>{config?.name ?? "-"}</h2>
                 <div className='flex gap-3'>
                   {
                     link.map((li, idx) => (

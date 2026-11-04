@@ -5,7 +5,7 @@ const Heading = ({ icon, title, subtitle, description }) => {
       <div className='flex flex-col items-center gap-4 text-center'>
 
         {title && (
-          <div className='w-fit flex flex-row items-center gap-2 px-4 py-1.5 border border-primaryColor/50 bg-ternaryColor/20 rounded-full shadow-2xl shadow-primaryColor text-ternaryColor'>
+          <div className='w-fit flex flex-row items-center gap-2 px-4 py-1.5 border border-primaryColor/50 bg-ternaryColor/20 rounded-full shadow-2xl shadow-primaryColor/60 text-ternaryColor'>
             {icon && <span className="flex items-center justify-center">{icon}</span>}
             <p className='font-bold text-[13px] md:text-[14px] uppercase tracking-wide'>
               {title}

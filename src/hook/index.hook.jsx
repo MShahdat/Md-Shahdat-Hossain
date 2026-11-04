@@ -1,5 +1,5 @@
-import { useQuery } from "@tanstack/react-query"
-import { getCategory, getConfigById, getEduction, getHeadingById, getProjects, getServices, getSkills, getTools } from "../api/index.api"
+import { useMutation, useQuery } from "@tanstack/react-query"
+import { createContact, getCategory, getConfigById, getEducation, getHeadingById, getProjects, getServices, getSkills, getTools } from "../api/index.api"
 
 
 export const useGetConfigById = () => {
@@ -61,6 +61,13 @@ export const useGetServices = () => {
 export const useGetEducations = () => {
   return useQuery({
     queryKey: ["educations"],
-    queryFn: getEduction
+    queryFn: getEducation
+  })
+}
+
+
+export const useCreateContact = () => {
+  return useMutation({
+    mutationFn: createContact
   })
 }
